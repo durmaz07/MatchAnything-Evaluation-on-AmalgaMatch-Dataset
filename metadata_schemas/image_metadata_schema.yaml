@@ -1,0 +1,147 @@
+id: https://example.org/image_metadata.schema
+name: image_metadata_schema
+description: >
+  Schema describing image-level metadata for microscopy-derived image files,
+  including resolution, acquisition parameters, and derived modality flags.
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  ex: https://example.org/image_metadata/
+default_prefix: ex
+default_range: string
+
+imports:
+  - linkml:types
+
+types:
+  float:
+    base: double
+    uri: xsd:double
+  integer:
+    base: int
+    uri: xsd:integer
+
+slots:
+  images:
+    description: >
+      Container for image metadata records. In JSON, this appears as the
+      "images" array containing multiple ImageMetadata objects.
+    range: ImageMetadata
+    multivalued: true
+    inlined_as_list: true
+
+  unique_images:
+    description: >
+      File name or unique identifier for the image. Corresponds to the
+      "Unique Images" field in the source data.
+    identifier: true
+    required: true
+    aliases:
+      - Unique Images
+
+  physical_pixel_size_m:
+    description: >
+      Physical size of a single pixel, in meters. Must be a positive real
+      number.
+    range: float
+    minimum_value: 0
+    required: true
+    aliases:
+      - Physical Pixel Size [m]
+
+  resolution_width:
+    description: >
+      Number of pixels in the horizontal (x) dimension of the image.
+      Must be a positive integer.
+    range: integer
+    minimum_value: 1
+    required: true
+    aliases:
+      - Resolution Width
+
+  resolution_height:
+    description: >
+      Number of pixels in the vertical (y) dimension of the image.
+      Must be a positive integer.
+    range: integer
+    minimum_value: 1
+    required: true
+    aliases:
+      - Resolution Height
+
+  microscope_type:
+    description: >
+      Type of microscope used to acquire the image (e.g., "Scanning Electron
+      Microscope").
+    range: string
+    required: true
+    aliases:
+      - Microscope Type
+
+  detector_imaging_mode:
+    description: >
+      Detector or imaging mode used to acquire the image
+      (e.g., "Backscattered Electron Detector",
+      "Electron Backscatter Diffraction").
+    range: string
+    required: true
+    aliases:
+      - Detector/Imaging Mode
+
+  derived_modality:
+    description: >
+      Indicator of whether the image is a derived/processed modality (1) or a
+      primary/raw modality (0). Stored as an integer constrained to 0 or 1.
+    range: integer
+    minimum_value: 0
+    maximum_value: 1
+    required: true
+    aliases:
+      - Derived Modality
+
+  derived_modality_type:
+    description: >
+      Human-readable description of the derived modality type
+      (e.g., "High-Resolution Digital Image Correlation Longitudinal Strain Map",
+      "False Color Representation of Grain IDs").
+    range: string
+    required: true
+    aliases:
+      - Derived Modality Type
+
+  stitching_indicator:
+    description: >
+      Indicator of whether the image results from stitching together multiple
+      acquisitions (1) or not stitched (0). Stored as an integer constrained
+      to 0 or 1.
+    range: integer
+    minimum_value: 0
+    maximum_value: 1
+    required: true
+    aliases:
+      - Stitching Indicator
+
+classes:
+  ImageCollection:
+    description: >
+      A collection of image metadata entries. This is the root object that
+      contains the "images" array in the JSON representation.
+    tree_root: true
+    attributes:
+      images: {}
+
+  ImageMetadata:
+    description: >
+      Metadata describing a single microscopy image, including acquisition
+      parameters, resolution, and flags indicating derived modalities and
+      stitching.
+    attributes:
+      unique_images:
+      physical_pixel_size_m:
+      resolution_width:
+      resolution_height:
+      microscope_type:
+      detector_imaging_mode:
+      derived_modality:
+      derived_modality_type:
+      stitching_indicator:

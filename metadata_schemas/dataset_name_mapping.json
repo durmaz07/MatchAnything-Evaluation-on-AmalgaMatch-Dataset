@@ -1,0 +1,21 @@
+{
+    "5842WCu_Spalled": "5842WCu-Spalled_SEM-SE_SEM-BSE_Multiscale",
+    "AMSpalledTa": "Ta-AM-Spalled_SEM-BSE_EBSD_SameSliceSerialSectioning",
+    "C103_fracture_surfaces": "C103_SEM-SE_LOM-DC-Height_FractureSurfaces",
+    "CoNi67": "CoNi-AM67_SEM-SE_EBSD_SameSliceSerialSectioning",
+    "CoNi67_OM-SEM": "CoNi-AM67__Multiscale",
+    "CoNi90_OM-SEM": "CoNi-AM90__Multiscale",
+    "CoNi90-AM-DIC": "CoNi-AM90_SEM-DIC_EBSD_SlipPartitioning",
+    "CP700BC_cracks_block5_pedestal1_0": "CoNi_SEM-SE_SEM-BSE_Cracks-SameSliceSerialSectioning",
+    "DDRX_Dislocations_1100C": "MoTaTiZrHf-HEA-DDRX-1100C_TEM_DislocationCharacterization",
+    "DDRX_Dislocations_900C": "MoTaTiZrHf-HEA-DDRX-900C_TEM_DislocationCharacterization",
+    "DDRX_Dislocations_900C_largeFOV": "MoTaTiZrHf-HEA-DDRX-900C_TEM_largeFOV-DislocationCharacterization",
+    "DIC_EBSD_Multimodal_In718": "In718-PrecipitationStrengthened_SEM-DIC_EBSD_SlipPartitioning",
+    "In718SS-CHESS": "In718-SolutionStrengthened_SEM-SE_EBSD_SameSliceSerialSectioning",
+    "In718_same_slice_BSE_EBSD": "In718-PrecipitationStrengthened_SEM-BSE_EBSD_SameSliceSerialSectioning",
+    "Martensitic_steel_AF_9628_SEM_EBSD": "AF9628-Martensitic_SEM-SE-Stitch_EBSD_SameSlice",
+    "MAX_Phase_Dislocations": "Ti3AlC2-MAX-Phase_TEM_DislocationCharacterization",
+    "SE2_EBSD_X2CrNi12": "X2CrNi12-Ferritic_SEM-SE-Stitch_EBSD_Fatigue-SameSlice",
+    "TRIP1_steel_LOM_EBSD": "TRIP1-Bainitic_LOM_SEM_EBSD_Multiscale"
+  }
+  
