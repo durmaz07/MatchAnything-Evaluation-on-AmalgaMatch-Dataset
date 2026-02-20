@@ -1,3 +1,10 @@
 data/test_data/*
+!data/test_data/.gitkeep
+
 results/*
+!results/.gitkeep
+
 weights/*
+!weights/.gitkeep
+
+!ontological_dataset_modeling/.gitkeep
