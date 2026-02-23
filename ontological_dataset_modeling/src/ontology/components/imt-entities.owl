@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/pmd/imt/components/imt-entities.owl/"
+     xml:base="https://w3id.org/pmd/imt/components/imt-entities.owl/"
+     xmlns:co="https://w3id.org/pmd/co/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="https://w3id.org/pmd/imt/components/imt-entities.owl">
+        <owl:imports rdf:resource="https://w3id.org/pmd/imt/components/imt-shared.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002350 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002350"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002351 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002351"/>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000001 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/imt/IMT_0000001">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000006"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000501"/>
+                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000502"/>
+                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0025005"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/pmd/imt/IMT_0000000"/>
+        <rdfs:label xml:lang="en">has coordinate system</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:definition xml:lang="en">has coordinate system is a realtion between a data item (1D, 2D, or 3D) and a coordinate system of this data item.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000006 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/imt/IMT_0000006">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <rdfs:label xml:lang="en">coordinate system of</rdfs:label>
+        <skos:definition xml:lang="en">Inverse of has coondinate system.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000007 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/imt/IMT_0000007">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000010"/>
+        <rdfs:domain rdf:resource="https://w3id.org/pmd/imt/IMT_0000002"/>
+        <rdfs:range rdf:resource="https://w3id.org/pmd/co/PMD_0000502"/>
+        <rdfs:label xml:lang="en">has target member</rdfs:label>
+        <skos:definition xml:lang="en">has target member is a relation between a matching pair an image, which is a member is this pair, which content is going to be matched to a coordinate system of another image.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000008 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/imt/IMT_0000008">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000009"/>
+        <rdfs:domain rdf:resource="https://w3id.org/pmd/imt/IMT_0000002"/>
+        <rdfs:range rdf:resource="https://w3id.org/pmd/co/PMD_0000502"/>
+        <rdfs:label xml:lang="en">has source member</rdfs:label>
+        <skos:definition xml:lang="en">has source member is a relation between a matching pair an image, which is a member in this pair, which coordinate system is a going to used as a source coordinate system for a warped image.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000009 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/imt/IMT_0000009">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+        <rdfs:label xml:lang="en">source member of</rdfs:label>
+        <skos:definition xml:lang="en">inverse of has target member</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000010 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/imt/IMT_0000010">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+        <rdfs:label xml:lang="en">target member of</rdfs:label>
+        <skos:definition xml:lang="en">inverse of has target member</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000501 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000501"/>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000000 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label xml:lang="en">coordinate system</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:definition xml:lang="en">Coordinate system is an information content entity which describes the geometry of an image.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000002 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/imt/IMT_0000007"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000502"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/imt/IMT_0000008"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000502"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/pmd/co/PMD_0000502"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">matching pair</rdfs:label>
+        <skos:definition xml:lang="en">Matching pair is a data set which has exactly two 2D data items as its members, where one of the members is a target, and another one is a source. Here, the source image is to be mapped to the coordinate system (image scene) of a target image.</skos:definition>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

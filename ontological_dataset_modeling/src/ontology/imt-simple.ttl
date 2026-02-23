@@ -1,0 +1,1053 @@
+@prefix : <https://w3id.org/pmd/imt/imt-simple.ttl#> .
+@prefix co: <https://w3id.org/pmd/co/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@base <https://w3id.org/pmd/imt/imt-simple.ttl> .
+
+<https://w3id.org/pmd/imt/imt-simple.ttl> rdf:type owl:Ontology ;
+                                           owl:versionIRI <https://w3id.org/pmd/imt/releases/2026-02-19/imt-simple.ttl> ;
+                                           terms:description "None" ;
+                                           terms:license <https://creativecommons.org/licenses/unspecified> ;
+                                           terms:title "ImageTrans: Application-level ontology for image transformation" ;
+                                           owl:versionInfo "2026-02-19" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000112
+obo:IAO_0000112 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000115 "A phrase describing how a term should be used and/or a citation to a work which uses it. May also include other kinds of examples that facilitate immediate understanding, such as widely know prototypes or instances of a class, or cases where a relation is said to hold."@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:label "example of usage" ,
+                           "example of usage"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000115 "The official OBI definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en ,
+                                "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en ;
+                obo:IAO_0000116 """2012-04-05: 
+Barry Smith
+
+The official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions'  is terrible.
+
+Can you fix to something like:
+
+A statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.
+
+Alan Ruttenberg
+
+Your proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. 
+
+On the specifics of the proposed definition:
+
+We don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. 
+
+Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
+
+We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with."""@en ,
+                                """2012-04-05: 
+Barry Smith
+
+The official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions'  is terrible.
+
+Can you fix to something like:
+
+A statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.
+
+Alan Ruttenberg
+
+Your proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. 
+
+On the specifics of the proposed definition:
+
+We don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. 
+
+Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
+
+We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  """@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:label "definition" ,
+                           "definition"@en ,
+                           "textual definition" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000116
+obo:IAO_0000116 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000115 "An administrative note intended for its editor. It may not be included in the publication version of the ontology, so it should contain nothing necessary for end users to understand the ontology."@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obofoundry.org/obo/obi>"@en ;
+                rdfs:label "editor note"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000119
+obo:IAO_0000119 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000115 "Formal citation, e.g. identifier in external database to indicate / attribute source(s) for the definition. Free text indicate / attribute source(s) for the definition. EXAMPLE: Author Name, URI, MeSH Term C04, PUBMED ID, Wiki uri on 31.01.2007"@en ,
+                                "formal citation, e.g. identifier in external database to indicate / attribute source(s) for the definition. Free text indicate / attribute source(s) for the definition. EXAMPLE: Author Name, URI, MeSH Term C04, PUBMED ID, Wiki uri on 31.01.2007"@en ;
+                obo:IAO_0000119 "Discussion on obo-discuss mailing-list, see http://bit.ly/hgm99w" ,
+                                "Discussion on obo-discuss mailing-list, see http://bit.ly/hgm99w"@en ,
+                                "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:label "definition source"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000232
+obo:IAO_0000232 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000233
+obo:IAO_0000233 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/source
+dc:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+terms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:AnnotationProperty ;
+                  rdfs:label "description" .
+
+
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty ;
+              rdfs:label "license" .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:AnnotationProperty ;
+            rdfs:label "title" .
+
+
+###  http://usefulinc.com/ns/doap#repository
+doap:repository rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasDbXref
+oboInOwl:hasDbXref rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/pmd/co/PMD_0000060
+co:PMD_0000060 rdf:type owl:AnnotationProperty ;
+               rdfs:comment "Indicates whether the ontology element is part of the minimal profile of the ontology. Useful for modularization, simplified views, or lightweight implementations."@en ;
+               rdfs:label "isInMinimalProfile"@en ;
+               co:PMD_0001032 "https://github.com/materialdigital/core-ontology/issues/121" .
+
+
+###  https://w3id.org/pmd/co/PMD_0000064
+co:PMD_0000064 rdf:type owl:AnnotationProperty ;
+               rdfs:comment "An editor note referring to a pattern which shows the usage of this class or property."@en ;
+               rdfs:label "pattern example"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0001032
+co:PMD_0001032 rdf:type owl:AnnotationProperty ;
+               obo:IAO_0000115 "A term tracker annotation is an editor note used to track the history of an entity. For each change, it records the related GitHub issue and pull request."@en ;
+               obo:IAO_0000116 "hijacked from http://openenergy-platform.org/ontology/oeo/OEO_00020426"@en ;
+               rdfs:label "term tracker annotation"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0050117
+co:PMD_0050117 rdf:type owl:AnnotationProperty ;
+               rdfs:label "abbreviation"@en ;
+               skos:definition "A textual annotation used to specify a commonly accepted abbreviation, acronym, or shortened form of a class label. This property is intended to support concise referencing of ontology classes, especially when standard abbreviations are widely used in practice."@en ;
+               skos:example "\"DNA\" for \"Deoxyribonucleic Acid\""@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000050
+obo:BFO_0000050 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000051 ;
+                rdf:type owl:TransitiveProperty ;
+                obo:IAO_0000112 "my brain is part of my body (continuant parthood, two material entities)"@en ,
+                                "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)"@en ,
+                                "this day is part of this year (occurrent parthood)"@en ;
+                obo:IAO_0000115 "a core relation that holds between a part and its whole"@en ;
+                obo:IAO_0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other."@en ,
+                                "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en ,
+                                """Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
+
+A continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'."""@en ;
+                rdfs:label "part of"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000051
+obo:BFO_0000051 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000051 ;
+                rdf:type owl:TransitiveProperty ;
+                obo:IAO_0000112 "my body has part my brain (continuant parthood, two material entities)"@en ,
+                                "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)"@en ,
+                                "this year has part this day (occurrent parthood)"@en ;
+                obo:IAO_0000115 "a core relation that holds between a whole and its part"@en ;
+                obo:IAO_0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part."@en ,
+                                "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en ,
+                                """Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
+
+A continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'."""@en ;
+                rdfs:label "has part"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000054
+obo:BFO_0000054 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000055 ;
+                rdfs:label "has realization"@en ,
+                           "realized in"@en ;
+                skos:definition "b has realization c =Def c realizes b"@en ;
+                skos:example "As for realizes"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000055
+obo:BFO_0000055 rdf:type owl:ObjectProperty ;
+                obo:IAO_0000115 "Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process"@en ;
+                rdfs:label "realizes"@en ;
+                skos:definition "(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d & for all t, if b has participant d then c exists & the type instantiated by b is correlated with the type instantiated by c"@en ;
+                skos:example "A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000108
+obo:BFO_0000108 rdf:type owl:ObjectProperty ;
+                rdfs:label "exists at"@en ;
+                skos:definition "(Elucidation) exists at is a relation between a particular and some temporal region at which the particular exists"@en ;
+                skos:example "First World War exists at 1914-1916; Mexico exists at January 1, 2000"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000117
+obo:BFO_0000117 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000051 ;
+                owl:inverseOf obo:BFO_0000132 ;
+                rdf:type owl:TransitiveProperty ;
+                rdfs:label "has occurrent part"@en ;
+                skos:definition "b has occurrent part c =Def c occurrent part of b"@en ;
+                skos:example "Mary's life has occurrent part Mary's 5th birthday"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000118
+obo:BFO_0000118 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000117 ;
+                owl:inverseOf obo:BFO_0000138 ;
+                rdf:type owl:TransitiveProperty ;
+                rdfs:label "has proper occurrent part"@en ;
+                skos:definition "b has proper occurrent part c =Def b has occurrent part c & b and c are not identical"@en ;
+                skos:example "As for has occurrent part."@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000132
+obo:BFO_0000132 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000050 ;
+                rdf:type owl:TransitiveProperty ;
+                rdfs:label "occurrent part of"@en ;
+                skos:definition "(Elucidation) occurrent part of is a relation between occurrents b and c when b is part of c"@en ;
+                skos:example "Mary's 5th birthday is an occurrent part of Mary's life; the first set of the tennis match is an occurrent part of the tennis match"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000138
+obo:BFO_0000138 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000132 ;
+                rdf:type owl:TransitiveProperty ;
+                rdfs:label "proper occurrent part of"@en ;
+                skos:definition "b proper occurrent part of c =Def b occurrent part of c & b and c are not identical"@en ;
+                skos:example "As for occurrent part of."@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000210
+obo:BFO_0000210 rdf:type owl:ObjectProperty ;
+                rdfs:label "occupies spatial region"@en ;
+                skos:definition "b occupies spatial region r =Def b is an independent continuant that is not a spatial region & r is a spatial region & there is some time t such that every continuant part of b occupies some continuant part of r at t and no continuant part of b occupies any spatial region that is not a continuant part of r at t"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000039
+obo:IAO_0000039 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000051 ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:label "has measurement unit label"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000136
+obo:IAO_0000136 rdf:type owl:ObjectProperty ;
+                owl:inverseOf co:PMD_0000004 ;
+                obo:IAO_0000112 "This document is about information artifacts and their representations"@en ;
+                obo:IAO_0000115 "A (currently) primitive relation that relates an information artifact to an entity."@en ;
+                obo:IAO_0000116 """7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of \"mentions\" relation. Weaken the is_about relationship to be primitive. 
+
+We will try to build it back up by elaborating the various subproperties that are more precisely defined.
+
+Some currently missing phenomena that should be considered \"about\" are predications - \"The only person who knows the answer is sitting beside me\" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic."""@en ;
+                obo:IAO_0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
+                rdfs:label "is about"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000219
+obo:IAO_0000219 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:IAO_0000136 ;
+                owl:inverseOf obo:IAO_0000235 ;
+                obo:IAO_0000112 "A person's name denotes the person. A variable name in a computer program denotes some piece of memory. Lexically equivalent strings can denote different things, for instance \"Alan\" can denote different people. In each case of use, there is a case of the denotation relation obtaining, between \"Alan\" and the person that is being named."@en ;
+                obo:IAO_0000115 "A primitive, instance-level, relation obtaining between an information content entity and some portion of reality. Denotation is what happens when someone creates an information content entity E in order to specifically refer to something. The only relation between E and the thing is that E can be used to 'pick out' the thing. This relation connects those two together. Freedictionary.com sense 3: To signify directly; refer to specifically"@en ;
+                obo:IAO_0000116 """2009-11-10 Alan Ruttenberg. Old definition said the following to emphasize the generic nature of this relation. We no longer have 'specifically denotes', which would have been primitive, so make this relation primitive.
+g denotes r =def 
+r is a portion of reality
+there is some c that is a concretization of g 
+every c that is a concretization of g specifically denotes r"""@en ;
+                obo:IAO_0000119 "Conversations with Barry Smith, Werner Ceusters, Bjoern Peters, Michel Dumontier, Melanie Courtot, James Malone, Bill Hogan"@en ;
+                rdfs:comment ""@en ;
+                rdfs:label "denotes"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000221
+obo:IAO_0000221 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:IAO_0000136 ;
+                owl:inverseOf obo:IAO_0000417 ;
+                obo:IAO_0000115 "m is a quality measurement of q at t. When q is a quality, there is a measurement process p that has specified output m, a measurement datum, that is about q"@en ;
+                obo:IAO_0000116 "8/6/2009 Alan Ruttenberg: The strategy is to be rather specific with this relationship. There are other kinds of measurements that are not of qualities, such as those that measure time. We will add these as separate properties for the moment and see about generalizing later"@en ,
+                                """From the second IAO workshop [Alan Ruttenberg 8/6/2009: not completely current, though bringing in comparison is probably important]
+
+This one is the one we are struggling with at the moment. The issue is what a measurement measures. On the one hand saying that it measures the quality would include it \"measuring\" the bearer = referring to the bearer in the measurement. However this makes comparisons of two different things not possible. On the other hand not having it inhere in the bearer, on the face of it, breaks the audit trail.
+
+Werner suggests a solution based on \"Magnitudes\" a proposal for which we are awaiting details.
+--
+From the second IAO workshop, various comments, [commented on by Alan Ruttenberg 8/6/2009]
+
+unit of measure is a quality, e.g. the length of a ruler.
+
+[We decided to hedge on what units of measure are, instead talking about measurement unit labels, which are the information content entities that are about whatever measurement units are. For IAO we need that information entity in any case. See the term measurement unit label]
+
+[Some struggling with the various subflavors of is_about. We subsequently removed the relation represents, and describes until and only when we have a better theory]
+
+a represents b means either a denotes b or a describes
+
+describe:
+a describes b means a is about b and a allows an inference of at least one quality of b
+
+We have had a long discussion about denotes versus describes."""@en ,
+                                """From the second IAO workshop: An attempt at tieing the quality to the measurement datum more carefully.
+
+a is a magnitude means a is a determinate quality particular inhering in some bearer b existing at a time t that can be represented/denoted by an information content entity e that has parts denoting a unit of measure, a number, and b. The unit of measure is an instance of the determinable quality."""@en ,
+                                """From the second meeting on IAO:
+
+An attempt at defining assay using Barry's \"reliability\" wording
+
+assay:
+process and has_input some material entity
+and has_output some information content entity 
+and which is such that instances of this process type reliably generate 
+outputs that describes the input."""@en ,
+                                """This one is the one we are struggling with at the moment. The issue is what a measurement measures. On the one hand saying that it measures the quality would include it \"measuring\" the bearer = referring to the bearer in the measurement. However this makes comparisons of two different things not possible. On the other hand not having it inhere in the bearer, on the face of it, breaks the audit trail.
+
+Werner suggests a solution based on \"Magnitudes\" a proposal for which we are awaiting details."""@en ;
+                rdfs:label "is quality measurement of"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000235
+obo:IAO_0000235 rdf:type owl:ObjectProperty ;
+                obo:IAO_0000115 "inverse of the relation 'denotes'"@en ;
+                obo:IAO_0000233 <https://github.com/information-artifact-ontology/IAO/issues/206> ;
+                rdfs:label "denoted by"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000417
+obo:IAO_0000417 rdf:type owl:ObjectProperty ;
+                obo:IAO_0000115 "inverse of the relation of is quality measurement of"@en ;
+                obo:IAO_0000116 "2009/10/19 Alan Ruttenberg. Named 'junk' relation useful in restrictions, but not a real instance relationship"@en ;
+                rdfs:label "is quality measured as"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000418
+obo:IAO_0000418 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:IAO_0000136 ;
+                owl:inverseOf obo:IAO_0000419 ;
+                obo:IAO_0000115 "A relation between a data item and a quality of a material entity where the material entity is the specified output of a material transformation which achieves an objective specification that indicates the intended value of the specified quality."@en ;
+                rdfs:label "is quality specification of"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000419
+obo:IAO_0000419 rdf:type owl:ObjectProperty ;
+                obo:IAO_0000115 "inverse of the relation of is quality specification of"@en ;
+                obo:IAO_0000116 "2009/10/19 Alan Ruttenberg. Named 'junk' relation useful in restrictions, but not a real instance relationship"@en ;
+                rdfs:label "quality is specified as"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000293
+obo:OBI_0000293 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000057 ;
+                owl:inverseOf obo:OBI_0000295 ;
+                obo:IAO_0000112 "see is_input_of example_of_usage"@en ;
+                obo:IAO_0000115 "The inverse property of is specified input of" ;
+                obo:IAO_0000116 "8/17/09: specified inputs of one process are not necessarily specified inputs of a larger process that it is part of. This is in contrast to how 'has participant' works." ;
+                rdfs:label "has specified input"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000295
+obo:OBI_0000295 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000056 ;
+                obo:IAO_0000112 "some Autologous EBV(Epstein-Barr virus)-transformed B-LCL (B lymphocyte cell line) is_input_for instance of Chromum Release Assay described at https://wiki.cbil.upenn.edu/obiwiki/index.php/Chromium_Release_assay"@en ;
+                obo:IAO_0000115 "A relation between a completely executed planned process and a continuant participating in that process that is not created during the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of." ;
+                rdfs:label "is specified input of"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000299
+obo:OBI_0000299 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000057 ;
+                owl:inverseOf obo:OBI_0000312 ;
+                obo:IAO_0000115 "The inverse property of is specified output of" ;
+                rdfs:label "has specified output"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000312
+obo:OBI_0000312 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000056 ;
+                obo:IAO_0000115 "A relation between a completely executed planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en ;
+                rdfs:label "is specified output of"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000417
+obo:OBI_0000417 rdf:type owl:ObjectProperty ;
+                obo:IAO_0000112 "A cell sorting process achieves the objective specification 'material separation objective'" ;
+                obo:IAO_0000115 "This relation obtains between a planned process and a objective specification when the criteria specified in the objective specification are met at the end of the planned process."@en ;
+                obo:IAO_0000119 "PPPB branch derived" ;
+                obo:IAO_0000232 "modified according to email thread from 1/23/09 in accordince with DT and PPPB branch" ;
+                rdfs:label "achieves_planned_objective" ;
+                co:PMD_0000064 "https://github.com/search?q=repo%3Amaterialdigital%2Fcore-ontology+path%3A%2F%5Epatterns%5C%2F%2F+OBI_0000417&type=code" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0001927
+obo:OBI_0001927 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:IAO_0000136 ;
+                owl:inverseOf co:PMD_0000077 ;
+                obo:IAO_0000115 "A relation between a value specification and an entity which the specification is about."@en ;
+                rdfs:label "specifies value of" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0001938
+obo:OBI_0001938 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000051 ;
+                obo:IAO_0000115 "A relation between an information content entity and a value specification that specifies its value."@en ;
+                obo:IAO_0000119 "OBI" ;
+                rdfs:label "has value specification" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000052
+obo:RO_0000052 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0000053 ;
+               rdf:type owl:FunctionalProperty ;
+               obo:IAO_0000112 "this fragility is a characteristic of this vase"@en ,
+                               "this red color is a characteristic of this apple"@en ;
+               obo:IAO_0000115 "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."@en ;
+               rdfs:comment "Note that this relation was previously called \"inheres in\", but was changed to be called \"characteristic of\" because BFO2 uses \"inheres in\" in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing." ;
+               rdfs:label "characteristic of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000053
+obo:RO_0000053 rdf:type owl:ObjectProperty ,
+                        owl:InverseFunctionalProperty ;
+               obo:IAO_0000112 "this apple is bearer of this red color"@en ,
+                               "this vase is bearer of this fragility"@en ;
+               obo:IAO_0000115 "Inverse of characteristic_of"@en ;
+               obo:IAO_0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
+               rdfs:label "has characteristic"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000056
+obo:RO_0000056 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0000057 ;
+               obo:IAO_0000112 "this blood clot participates in this blood coagulation"@en ,
+                               "this input material (or this output material) participates in this process"@en ,
+                               "this investigator participates in this investigation"@en ;
+               obo:IAO_0000115 "a relation between a continuant and a process, in which the continuant is somehow involved in the process"@en ;
+               rdfs:label "participates in"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000057
+obo:RO_0000057 rdf:type owl:ObjectProperty ;
+               owl:propertyChainAxiom ( obo:BFO_0000051
+                                        obo:RO_0000057
+                                      ) ;
+               obo:IAO_0000112 "this blood coagulation has participant this blood clot"@en ,
+                               "this investigation has participant this investigator"@en ,
+                               "this process has participant this input material (or this output material)"@en ;
+               obo:IAO_0000115 "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en ;
+               obo:IAO_0000116 "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time."@en ;
+               rdfs:label "has participant"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000058
+obo:RO_0000058 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0000059 ;
+               obo:IAO_0000112 "A journal article is an information artifact that inheres in some number of printed journals. For each copy of the printed journal there is some quality that carries the journal article, such as a pattern of ink. The journal article (a generically dependent continuant) is concretized as the quality (a specifically dependent continuant), and both depend on that copy of the printed journal (an independent continuant)."@en ,
+                               "An investigator reads a protocol and forms a plan to carry out an assay. The plan is a realizable entity (a specifically dependent continuant) that concretizes the protocol (a generically dependent continuant), and both depend on the investigator (an independent continuant). The plan is then realized by the assay (a process)."@en ;
+               obo:IAO_0000115 "A relationship between a generically dependent continuant and a specifically dependent continuant or process, in which the generically dependent continuant depends on some independent continuant or process in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants or processes."@en ,
+                               "A relationship between a generically dependent continuant and a specifically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants."@en ;
+               rdfs:label "is concretized as"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000059
+obo:RO_0000059 rdf:type owl:ObjectProperty ;
+               obo:IAO_0000112 "A journal article is an information artifact that inheres in some number of printed journals. For each copy of the printed journal there is some quality that carries the journal article, such as a pattern of ink. The quality (a specifically dependent continuant) concretizes the journal article (a generically dependent continuant), and both depend on that copy of the printed journal (an independent continuant)."@en ,
+                               "An investigator reads a protocol and forms a plan to carry out an assay. The plan is a realizable entity (a specifically dependent continuant) that concretizes the protocol (a generically dependent continuant), and both depend on the investigator (an independent continuant). The plan is then realized by the assay (a process)."@en ;
+               obo:IAO_0000115 "A relationship between a specifically dependent continuant and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. Multiple specifically dependent continuants can concretize the same generically dependent continuant."@en ,
+                               "A relationship between a specifically dependent continuant or process and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. Multiple specifically dependent continuants or processes can concretize the same generically dependent continuant."@en ;
+               rdfs:label "concretizes"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000079
+obo:RO_0000079 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               owl:inverseOf obo:RO_0000085 ;
+               obo:IAO_0000112 "this catalysis function is a function of this enzyme"@en ;
+               obo:IAO_0000115 "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A function inheres in its bearer at all times for which the function exists, however the function need not be realized at all the times that the function exists."@en ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
+               rdfs:label "function of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000080
+obo:RO_0000080 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               owl:inverseOf obo:RO_0000086 ;
+               obo:IAO_0000112 "this red color is a quality of this apple"@en ;
+               obo:IAO_0000115 "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A quality inheres in its bearer at all times for which the quality exists."@en ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
+               rdfs:label "quality of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000081
+obo:RO_0000081 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               owl:inverseOf obo:RO_0000087 ;
+               obo:IAO_0000112 "this investigator role is a role of this person"@en ;
+               obo:IAO_0000115 "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A role inheres in its bearer at all times for which the role exists, however the role need not be realized at all the times that the role exists."@en ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
+               rdfs:label "role of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000085
+obo:RO_0000085 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               obo:IAO_0000112 "this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)"@en ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists."@en ;
+               rdfs:label "has function"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000086
+obo:RO_0000086 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               obo:IAO_0000112 "this apple has quality this red color"@en ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist."@en ;
+               rdfs:label "has quality"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000087
+obo:RO_0000087 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               obo:IAO_0000112 "this person has role this investigator role (more colloquially: this person has this role of investigator)"@en ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists."@en ;
+               rdfs:label "has role"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000091
+obo:RO_0000091 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               owl:inverseOf obo:RO_0000092 ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence"@en ;
+               rdfs:label "has disposition"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000092
+obo:RO_0000092 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               obo:IAO_0000115 "inverse of has disposition" ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
+               rdfs:label "disposition of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0001000
+obo:RO_0001000 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0001001 ;
+               obo:IAO_0000112 "this cell derives from this parent cell (cell division)"@en ,
+                               "this nucleus derives from this parent nucleus (nuclear division)"@en ;
+               obo:IAO_0000115 "a relation between two distinct material entities, the new entity and the old entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity"@en ;
+               obo:IAO_0000116 "This is a very general relation. More specific relations are preferred when applicable, such as 'directly develops from'."@en ;
+               rdfs:label "derives from"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0001001
+obo:RO_0001001 rdf:type owl:ObjectProperty ;
+               obo:IAO_0000112 "this parent cell derives into this cell (cell division)"@en ,
+                               "this parent nucleus derives into this nucleus (nuclear division)"@en ;
+               obo:IAO_0000115 "a relation between two distinct material entities, the old entity and the new entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity"@en ;
+               obo:IAO_0000116 "This is a very general relation. More specific relations are preferred when applicable, such as 'directly develops into'. To avoid making statements about a future that may not come to pass, it is often better to use the backward-looking 'derives from' rather than the forward-looking 'derives into'."@en ;
+               rdfs:label "derives into"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0001015
+obo:RO_0001015 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0001025 ;
+               rdf:type owl:TransitiveProperty ;
+               obo:IAO_0000112 "my head is the location of my brain"@en ,
+                               "this cage is the location of this rat"@en ;
+               obo:IAO_0000115 "a relation between two independent continuants, the location and the target, in which the target is entirely within the location"@en ;
+               obo:IAO_0000116 "Most location relations will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en ;
+               rdfs:label "location of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0001025
+obo:RO_0001025 rdf:type owl:ObjectProperty ,
+                        owl:TransitiveProperty ;
+               owl:propertyChainAxiom ( obo:RO_0001025
+                                        obo:BFO_0000050
+                                      ) ;
+               obo:IAO_0000112 "my brain is located in my head"@en ,
+                               "this rat is located in this cage"@en ;
+               obo:IAO_0000115 "a relation between two independent continuants, the target and the location, in which the target is entirely within the location"@en ;
+               obo:IAO_0000116 "Location as a relation between instances: The primitive instance-level relation c located_in r at t reflects the fact that each continuant is at any given time associated with exactly one spatial region, namely its exact location. Following we can use this relation to define a further instance-level location relation - not between a continuant and the region which it exactly occupies, but rather between one continuant and another. c is located in c1, in this sense, whenever the spatial region occupied by c is part_of the spatial region occupied by c1.    Note that this relation comprehends both the relation of exact location between one continuant and another which obtains when r and r1 are identical (for example, when a portion of fluid exactly fills a cavity), as well as those sorts of inexact location relations which obtain, for example, between brain and head or between ovum and uterus"@en ,
+                               "Most location relations will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en ;
+               rdfs:label "located in"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002082
+obo:RO_0002082 rdf:type owl:ObjectProperty ,
+                        owl:SymmetricProperty ,
+                        owl:TransitiveProperty ;
+               obo:IAO_0000115 "x simultaneous with y iff ω(x) = ω(y) and ω(α ) = ω(α), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point and '=' indicates the same instance in time." ;
+               rdfs:comment "t1 simultaneous_with t2 iff:=  t1 before_or_simultaneous_with t2  and not (t1 before t2)"@en ;
+               rdfs:label "simultaneous with"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002131
+obo:RO_0002131 rdf:type owl:ObjectProperty ,
+                        owl:SymmetricProperty ;
+               obo:IAO_0000115 "x overlaps y if and only if there exists some z such that x has part z and z part of y" ;
+               rdfs:label "overlaps"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002223
+obo:RO_0002223 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:BFO_0000050 ;
+               owl:inverseOf obo:RO_0002224 ;
+               obo:IAO_0000115 "inverse of starts with" ;
+               obo:IAO_0000119 "Allen" ;
+               rdfs:label "starts"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002224
+obo:RO_0002224 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:BFO_0000051 ;
+               rdf:type owl:TransitiveProperty ;
+               obo:IAO_0000112 "Every insulin receptor signaling pathway starts with the binding of a ligand to the insulin receptor" ;
+               obo:IAO_0000115 "x starts with y if and only if x has part y and the time point at which x starts is equivalent to the time point at which y starts. Formally: α(y) = α(x) ∧ ω(y) < ω(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." ;
+               rdfs:label "starts with"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002229
+obo:RO_0002229 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:BFO_0000050 ;
+               owl:inverseOf obo:RO_0002230 ;
+               obo:IAO_0000115 "inverse of ends with" ;
+               rdfs:label "ends"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002230
+obo:RO_0002230 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:BFO_0000051 ;
+               rdf:type owl:TransitiveProperty ;
+               obo:IAO_0000115 "x ends with y if and only if x has part y and the time point at which x ends is equivalent to the time point at which y ends. Formally: α(y) > α(x) ∧ ω(y) = ω(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." ;
+               rdfs:label "ends with"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002233
+obo:RO_0002233 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000057 ;
+               owl:inverseOf obo:RO_0002352 ;
+               owl:propertyChainAxiom ( obo:RO_0002224
+                                        obo:RO_0002233
+                                      ) ;
+               obo:IAO_0000115 "p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p." ;
+               rdfs:label "has input"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002234
+obo:RO_0002234 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000057 ;
+               owl:inverseOf obo:RO_0002353 ;
+               owl:propertyChainAxiom ( obo:RO_0002230
+                                        obo:RO_0002234
+                                      ) ;
+               obo:IAO_0000115 "p has output c iff c is a participant in p, c is present at the end of p, and c is not present in the same state at the beginning of p." ;
+               rdfs:label "has output"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002350
+obo:RO_0002350 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:BFO_0000050 ;
+               owl:inverseOf obo:RO_0002351 ;
+               obo:IAO_0000112 "An organism that is a member of a population of organisms" ;
+               obo:IAO_0000115 "is member of is a mereological relation between a item and a collection." ;
+               obo:IAO_0000119 "SIO" ;
+               rdfs:label "member of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002351
+obo:RO_0002351 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:BFO_0000051 ;
+               rdf:type owl:IrreflexiveProperty ;
+               obo:IAO_0000115 "has member is a mereological relation between a collection and an item." ;
+               obo:IAO_0000119 "SIO" ;
+               rdfs:label "has member"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002352
+obo:RO_0002352 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000056 ;
+               obo:IAO_0000115 "inverse of has input" ;
+               rdfs:label "input of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002353
+obo:RO_0002353 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000056 ;
+               obo:IAO_0000115 "inverse of has output" ;
+               rdfs:label "output of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0009006
+obo:RO_0009006 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0009007 ;
+               obo:IAO_0000112 "A mass measurement assay measures an material's mass characteristic. A radioactivity detection assay measures the amount of radiation (alpha, beta or gamma ray emmissions) coming from a material."@en ;
+               obo:IAO_0000115 "A relation between an assay and a characteristic, in which the assay generates a data item which is a measure of a characteristic."@en ;
+               rdfs:label "assay measures characteristic"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0009007
+obo:RO_0009007 rdf:type owl:ObjectProperty ;
+               obo:IAO_0000115 "Inverse of 'assay measures characteristic'"@en ;
+               rdfs:label "characteristic measured by assay"@en .
+
+
+###  http://purl.obolibrary.org/obo/STATO_0000102
+obo:STATO_0000102 rdf:type owl:ObjectProperty ;
+                  owl:propertyChainAxiom ( obo:BFO_0000055
+                                           obo:RO_0000059
+                                         ) ;
+                  obo:IAO_0000115 "relationship between a planned process and the plan specification that it carries out; it is defined as equivalent to the composed relationship (realizes o concretizes)"@en ;
+                  obo:IAO_0000119 "AGB" ;
+                  rdfs:label "executes" .
+
+
+###  https://w3id.org/pmd/co/PMD_0000004
+co:PMD_0000004 rdf:type owl:ObjectProperty ;
+               rdfs:label "is subject of"@en ;
+               skos:definition "Inverse of 'is about'."@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000009
+co:PMD_0000009 rdf:type owl:ObjectProperty ;
+               owl:inverseOf co:PMD_0025006 ;
+               rdfs:label "has process attribute"@en ;
+               rdfs:seeAlso "has process attribute from OEO https://openenergyplatform.org/ontology/oeo/OEO_00000500"@en ;
+               skos:definition "A relation between a process and a process attribute that depends on it."@en ;
+               skos:example "Tensile testing process has process attribute tensile rate"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000069
+co:PMD_0000069 rdf:type owl:ObjectProperty ;
+               owl:inverseOf co:PMD_0000070 ;
+               rdf:type owl:InverseFunctionalProperty ;
+               rdfs:label "has state"@en ;
+               skos:definition "relates an anchor continuant to a temporally qualified continuant that represents a specific temporal phase of its existence."@en ;
+               co:PMD_0001032 "https://github.com/materialdigital/core-ontology/issues/185" .
+
+
+###  https://w3id.org/pmd/co/PMD_0000070
+co:PMD_0000070 rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:label "is state of"@en ;
+               skos:definition "relates a temporally qualified continuant to the unique anchor continuant that it is a temporal phase of"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000077
+co:PMD_0000077 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf co:PMD_0000004 ;
+               rdfs:label "specified by value"@en ;
+               skos:definition "A relation between an entity and a value specification which is about this entity."@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020127
+co:PMD_0020127 rdf:type owl:ObjectProperty ;
+               rdfs:comment """Despite has characteristic from RO does not have any domain constraints, it is still not possible to directly connect an instance of a process with an instance of a SDC. 
+
+First, SDC is dependent on a IC. As RO does not have \"bearer of\" object property, the \"has characteristic\" implies that the domain should be an IC. 
+
+Second, characteristic of is a functional property. Thus, two triples SDC_1 characteristc of IC_1 and SDC_2  characteristc of Process_1 (where IC_1 participates in Process_1), cannot exist simultaneously. 
+An example of such case can be \"Temperature of during the annealing process was 1000°C\". Temperature is an SDC of some participant of the annealing, however it is not clear whether it is an SDC of an oven or of a sample in the oven. If we assert triple Annealing--> has characteristic --> Temperature 1000°C, then the correct triple connecting temperature SDC with either oven or specimen cannot exist."""@en ;
+               rdfs:label "refers to"@en ;
+               skos:definition "a relation between a process attribute and an SDC of some participant in a process"@en ;
+               skos:example "a relation to between a process attribute an a SDC of some participant in a process."@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0025006
+co:PMD_0025006 rdf:type owl:ObjectProperty ;
+               rdfs:label "process attribute of"@en ;
+               skos:definition "A relation between a process attribute and a process, which \"bears\" the attribute."@en ;
+               skos:example "Tensile rate is a process attribute of tensile test"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0025998
+co:PMD_0025998 rdf:type owl:ObjectProperty ;
+               owl:inverseOf co:PMD_0025999 ;
+               owl:propertyChainAxiom ( obo:BFO_0000051
+                                        co:PMD_0025998
+                                      ) ;
+               rdfs:label "has relational quality"@en ;
+               skos:definition "a relation between an independent continuant (the bearer) and a relational quality, in which the quality specifically depends on the bearer for its existence"@en ;
+               skos:example "material has relational quality mass proportion m, and portion of iron has the same relational quality mass proportion m"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0025999
+co:PMD_0025999 rdf:type owl:ObjectProperty ;
+               owl:propertyChainAxiom ( co:PMD_0025999
+                                        obo:BFO_0000050
+                                      ) ;
+               obo:IAO_0000116 """The 'relational quality of' is more strict that 'quality of' from RO, since domain is 'relational quality'. The motivtion to introduce an object property for relational qualities is the following:
+RO's 'quality of' is functional i.e., a->b, a->c => b=c. The functionality is relevant for most of the SDC -> IC triples, expect for relational qualities, which per definiton can be simultaneously inherited in >=2 ICs. Thus,  'relational quality of'  has the same intention to connect SDC to IC, however, without cardinality constraints."""@en ;
+               rdfs:label "relational quality of"@en ;
+               skos:definition "a relation between a relational quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"@en ;
+               skos:example "mass proportion m is relational qualitiy of material, and the same mass proportion m is relational qualitiy of portion of iron"@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000001
+<https://w3id.org/pmd/imt/IMT_0000001> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf obo:BFO_0000051 ;
+                                       owl:inverseOf <https://w3id.org/pmd/imt/IMT_0000006> ;
+                                       rdfs:range <https://w3id.org/pmd/imt/IMT_0000000> ;
+                                       rdfs:label "has coordinate system"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "has coordinate system is a realtion between a data item (1D, 2D, or 3D) and a coordinate system of this data item."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000006
+<https://w3id.org/pmd/imt/IMT_0000006> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf obo:BFO_0000050 ;
+                                       rdfs:label "coordinate system of"@en ;
+                                       skos:definition "Inverse of has coondinate system."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000007
+<https://w3id.org/pmd/imt/IMT_0000007> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf obo:RO_0002351 ;
+                                       owl:inverseOf <https://w3id.org/pmd/imt/IMT_0000010> ;
+                                       rdfs:domain <https://w3id.org/pmd/imt/IMT_0000002> ;
+                                       rdfs:label "has target member"@en ;
+                                       skos:definition "has target member is a relation between a matching pair an image, which is a member is this pair, which content is going to be matched to a coordinate system of another image."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000008
+<https://w3id.org/pmd/imt/IMT_0000008> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf obo:RO_0002351 ;
+                                       owl:inverseOf <https://w3id.org/pmd/imt/IMT_0000009> ;
+                                       rdfs:domain <https://w3id.org/pmd/imt/IMT_0000002> ;
+                                       rdfs:label "has source member"@en ;
+                                       skos:definition "has source member is a relation between a matching pair an image, which is a member in this pair, which coordinate system is a going to used as a source coordinate system for a warped image."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000009
+<https://w3id.org/pmd/imt/IMT_0000009> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf obo:RO_0002350 ;
+                                       rdfs:label "source member of"@en ;
+                                       skos:definition "inverse of has target member"@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000010
+<https://w3id.org/pmd/imt/IMT_0000010> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf obo:RO_0002350 ;
+                                       rdfs:label "target member of"@en ;
+                                       skos:definition "inverse of has target member"@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000012
+<https://w3id.org/pmd/imt/IMT_0000012> rdf:type owl:ObjectProperty ;
+                                       owl:propertyChainAxiom ( obo:OBI_0000312
+                                                                obo:OBI_0000293
+                                                                <https://w3id.org/pmd/imt/IMT_0000008>
+                                                              ) ;
+                                       rdfs:label "image derived from"@en ;
+                                       skos:definition """Warped image is an image which is a specified output of an image transofrmation process. It is derived from an image, which is a source member of a matching pair, that is a specified output of a image transformation process.
+
+image derived from is a relation between an warped image and an image, which is a source member if the matching pair that is a specified input to the image transofrmation process."""@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/pmd/imt/IMT_0000000
+<https://w3id.org/pmd/imt/IMT_0000000> rdf:type owl:Class ;
+                                       rdfs:label "coordinate system"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "Coordinate system is an information content entity which describes the geometry of an image."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000002
+<https://w3id.org/pmd/imt/IMT_0000002> rdf:type owl:Class ;
+                                       rdfs:label "matching pair"@en ;
+                                       skos:definition "Matching pair is a data set which has exactly two 2D data items as its members, where one of the members is a target, and another one is a source. Here, the source image is to be mapped to the coordinate system (image scene) of a target image."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000003
+<https://w3id.org/pmd/imt/IMT_0000003> rdf:type owl:Class ;
+                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000293 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000019>
+                                                       ] ;
+                                       rdfs:label "image transformation"@en ;
+                                       skos:altLabel "image mapping"@en ;
+                                       skos:definition "Image transformation process is a computing process which has some source  image and some parameterized transformation model, e.g., estimated homography, as specified inputs, and a warped image as a specified ouput. Here, the parameterized transformation model matches 2D coordinates of a scene of a source image to the coordinates of a scene of a target image."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000004
+<https://w3id.org/pmd/imt/IMT_0000004> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000017> ;
+                                       rdfs:label "manual point correspondences acquisition"@en ;
+                                       skos:definition "Manual point correspondences acquisition is point correspondences acquisition, where extraction and matching of key points in the images is performed by human efforts."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000005
+<https://w3id.org/pmd/imt/IMT_0000005> rdf:type owl:Class ;
+                                       obo:IAO_0000119 "https://medium.com/all-things-about-robotics-and-computer-vision/homography-and-how-to-calculate-it-8abf3a13ddc5" ;
+                                       rdfs:label "point correspondences"@en ;
+                                       skos:definition "Point correspondences is data set which represent pairs of corresponding coordinates (x, y)  and (x´, y´) in two coordinate systems s and s´. The point correspondences are used to determine a mapping between s and s´ which can then be used to calculate a correspondences for all other coordinates from s to s´."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000011
+<https://w3id.org/pmd/imt/IMT_0000011> rdf:type owl:Class ;
+                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000312 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000003>
+                                                       ] ;
+                                       rdfs:label "warped image"@en ;
+                                       skos:definition "Warped image is an image which is a specified output of an image transofrmation process. It is derived from an image, which is a source member of a matching pair, that is a specified output of a image transformation process."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000013
+<https://w3id.org/pmd/imt/IMT_0000013> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000005> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000312 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000018>
+                                                       ] ;
+                                       obo:IAO_0000119 "Estimated point correspondences is a point correspondences data set which is an output of some deep-learning point correspondences acquisition."@en ;
+                                       rdfs:label "estimated point correspondences"@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000014
+<https://w3id.org/pmd/imt/IMT_0000014> rdf:type owl:Class ;
+                                       rdfs:label "transformation model"@de .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000015
+<https://w3id.org/pmd/imt/IMT_0000015> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000014> ;
+                                       rdfs:label "homography"@de ;
+                                       skos:definition "A homography is a transofrmation modle which is used for continuous mapping of a planar information content entity from one perspective to another."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000016
+<https://w3id.org/pmd/imt/IMT_0000016> rdf:type owl:Class ;
+                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000293 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000005>
+                                                       ] ;
+                                       rdfs:label "transformation model parametrization"@de .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000017
+<https://w3id.org/pmd/imt/IMT_0000017> rdf:type owl:Class ;
+                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000299 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000005>
+                                                       ] ;
+                                       obo:IAO_0000119 "https://arxiv.org/pdf/2505.16599" ;
+                                       rdfs:label "point correspondences acquisition"@de ;
+                                       skos:definition "Point correspondences acquisition is a computing process which has two images with different imaging scenes as specified inputs and a point correspondences data set as a specified output. It includes expatraction and matching of the points from the images, as well as removal of outlier points."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000018
+<https://w3id.org/pmd/imt/IMT_0000018> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000017> ;
+                                       rdfs:label "deep-learning point correspondences acquisition"@de ;
+                                       skos:altLabel "automated point correspondences acquisition" ;
+                                       skos:definition "Deep-learning point correspondences acquisition is point correspondences acquisition, where the estimation of point correspondences data set is perfomed using neural networks, which map points from one image to another."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000019
+<https://w3id.org/pmd/imt/IMT_0000019> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000014> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000312 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000016>
+                                                       ] ;
+                                       rdfs:label "parameterized transofrmation model"@en ;
+                                       skos:altLabel "fitted transformation model"@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000020
+<https://w3id.org/pmd/imt/IMT_0000020> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000005> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000312 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000004>
+                                                       ] ;
+                                       rdfs:label "manually created point correspondences"@en ;
+                                       skos:definition "Estimated point correspondences is a point correspondences data set which is an output of some manual point correspondences acquisition."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000021
+<https://w3id.org/pmd/imt/IMT_0000021> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000005> ;
+                                       rdfs:label "inlier point correspondence"@en ;
+                                       skos:definition "Inliers point correspondences are point correspondence, containing contains points which correctly identify the same physical location in both images. Such inliers fit the underlying transformation model within a predefined margin of error."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000022
+<https://w3id.org/pmd/imt/IMT_0000022> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000005> ;
+                                       rdfs:label "outlier point correspondence"@en ;
+                                       skos:definition "Outlier point correspondences are point correspondences, containing points which incorrectly identify the same physical location in both images, i.e., a point in a a source image is mistakenly matched to a different point in the target image."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000024
+<https://w3id.org/pmd/imt/IMT_0000024> rdf:type owl:Class ;
+                                       obo:IAO_0000119 "https://en.wikipedia.org/wiki/Field_of_view" ;
+                                       rdfs:label "field of view"@en ;
+                                       skos:definition "A field of view (FOV) is the angular extent of the observable world that is seen at any given moment."@en .
+
+
+###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

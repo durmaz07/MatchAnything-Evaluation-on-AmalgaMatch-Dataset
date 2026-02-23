@@ -1,0 +1,59 @@
+id: imt
+title: "ImageTrans: Application-level ontology for image transformation"
+github_org: cmllezr
+git_main_branch: main
+repo: ImageTrans
+uribase: https://w3id.org/pmd
+uribase_suffix: imt
+preferredPrefix: IMT
+edit_format: owl
+
+# DISABLE Templates for now
+use_templates: false
+
+# Imports 
+import_group:
+  products:
+    - id: pmdco
+      title: "PMD Core Ontology"
+      mirror_from: https://materialdigital.github.io/core-ontology/ontology.owl
+
+# Components
+components:
+  products:
+    - filename: imports-edit.owl
+    - filename: imt-axioms-shared.owl
+    - filename: imt-microscopy.owl
+    - filename: imt-transformation.owl
+    - filename: imt-entities.owl
+    - filename: imt-shared.owl
+
+# Release
+primary_release: full
+release_artefacts:
+  - base
+  - full
+  - simple
+export_formats:
+  - owl
+  - ttl
+
+ci:
+  - github_actions
+
+namespaces:
+  - https://w3id.org/pmd/imt/
+idranges:
+  - idsfor: imt
+    idprefix: https://w3id.org/pmd/imt/IMT_
+    iddigits: 7
+
+idranges:
+  - idsfor: imt
+    idprefix: https://w3id.org/pmd/imt/IMT_
+    iddigits: 7
+
+idranges:
+  - idsfor: imt
+    idprefix: https://w3id.org/pmd/imt/IMT_
+    iddigits: 7

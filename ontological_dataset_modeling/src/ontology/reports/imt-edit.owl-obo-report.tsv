@@ -1,0 +1,26 @@
+Level	Rule Name	Subject	Property	Value
+ERROR	deprecated_class_reference	coordinate system	rdfs:subClassOf	information content entity
+WARN	missing_definition	matching pair	definition	
+WARN	missing_definition	image transformation	definition	
+WARN	missing_definition	manual point correspondences acquisition	definition	
+WARN	missing_definition	point correspondences	definition	
+WARN	missing_definition	coordinate system of	definition	
+WARN	missing_definition	has target member	definition	
+WARN	missing_definition	has source member	definition	
+WARN	missing_definition	source member of	definition	
+WARN	missing_definition	target member of	definition	
+WARN	missing_definition	warped image	definition	
+WARN	missing_definition	image derived from	definition	
+WARN	missing_definition	estimated point correspondences	definition	
+WARN	missing_definition	transformation model	definition	
+WARN	missing_definition	homography	definition	
+WARN	missing_definition	transformation model parametrization	definition	
+WARN	missing_definition	point correspondences acquisition	definition	
+WARN	missing_definition	deep-learning point correspondences acquisition	definition	
+WARN	missing_definition	parameterized transofrmation model	definition	
+WARN	missing_definition	manually created point correspondences	definition	
+WARN	missing_definition	inlier point correspondence	definition	
+WARN	missing_definition	outlier point correspondence	definition	
+WARN	missing_definition	field of view	definition	
+WARN	missing_obsolete_label	coordinate system	rdfs:label	coordinate system@en
+WARN	missing_obsolete_label	has coordinate system	rdfs:label	has coordinate system@en

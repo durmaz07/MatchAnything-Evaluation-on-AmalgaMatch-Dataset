@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base="">
+    <uri name="https://w3id.org/pmd/imt/imports/pmdco_import.owl" uri="../imports/pmdco_import.owl" />
+    <uri name="https://w3id.org/pmd/imt/imports/iao_import.owl" uri="../imports/iao_import.owl" />
+
+    <uri name="https://w3id.org/pmd/imt/components/imports-edit.owl" uri="imports-edit.owl" />
+    <uri name="https://w3id.org/pmd/imt/components/imt-axioms-shared.owl" uri="imt-axioms-shared.owl" />
+    <uri name="https://w3id.org/pmd/imt/components/imt-shared.owl" uri="imt-shared.owl" />
+
+    <uri name="https://w3id.org/pmd/imt/components/microscopy.owl" uri="imt-microscopy.owl" />
+    <uri name="https://w3id.org/pmd/imt/components/transformation.owl" uri="imt-transformation.owl" />
+    <uri name="https://w3id.org/pmd/imt/components/entities.owl" uri="imt-entities.owl" />
+</group>
+</catalog>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+  <group id="odk-managed-catalog" prefer="public">
+    <uri name="https://w3id.org/pmd/imt/imports/pmdco_import.owl" uri="imports/pmdco_import.owl" />
+    <uri name="https://w3id.org/pmd/imt/imports/iao_import.owl" uri="imports/iao_import.owl" />
+    <uri name="https://w3id.org/pmd/imt/imports/bfo_import.owl" uri="imports/bfo_import.owl" />
+    <uri name="https://w3id.org/pmd/imt/imports/ro_import.owl" uri="imports/ro_import.owl" />
+    <uri name="https://w3id.org/pmd/imt/components/imports-edit.owl" uri="components/imports-edit.owl" />
+    <uri name="https://w3id.org/pmd/imt/components/imt-axioms-shared.owl" uri="components/imt-axioms-shared.owl" />
+    <uri name="https://w3id.org/pmd/imt/components/imt-microscopy.owl" uri="components/imt-microscopy.owl" />
+    <uri name="https://w3id.org/pmd/imt/components/imt-transformation.owl" uri="components/imt-transformation.owl" />
+    <uri name="https://w3id.org/pmd/imt/components/imt-entities.owl" uri="components/imt-entities.owl" />
+    <uri name="https://w3id.org/pmd/imt/components/imt-shared.owl" uri="components/imt-shared.owl" />
+  </group>
+</catalog>
