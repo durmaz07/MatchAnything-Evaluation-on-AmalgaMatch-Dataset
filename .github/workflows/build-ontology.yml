@@ -34,7 +34,7 @@ jobs:
       - name: Build ontology
         env:
           DEFAULT_BRANCH: main
-        run: cd src/ontology && make refresh-imports all_assets ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G'
+        run: cd ontological_dataset_modeling/src/ontology && make refresh-imports all_assets ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G'
       - name: Commit files # commit the src folder
         uses: EndBug/add-and-commit@v9
         with:
