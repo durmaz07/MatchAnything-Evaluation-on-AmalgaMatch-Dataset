@@ -100,11 +100,11 @@ ALL_ANNOTATIONS=--ontology-iri https://w3id.org/pmd/imt/ -V https://w3id.org/pmd
 	--link-annotation owl:priorVersion https://w3id.org/pmd/imt/$(PRIOR_VERSION)
 
 update-ontology-annotations: 
-	$(ROBOT) annotate --input imt.owl $(ALL_ANNOTATIONS) --output ../../../imt.owl
-	$(ROBOT) annotate --input imt.ttl $(ALL_ANNOTATIONS) --output ../../../imt.ttl
-	$(ROBOT) annotate --input imt-full.owl $(ALL_ANNOTATIONS) --output ../../../imt-full.owl
-	$(ROBOT) annotate --input imt-full.ttl $(ALL_ANNOTATIONS) --output ../../../imt-full.ttl
-	$(ROBOT) annotate --input imt-base.owl $(ALL_ANNOTATIONS) --output ../../../imt-base.owl
-	$(ROBOT) annotate --input imt-base.ttl $(ALL_ANNOTATIONS) --output ../../../imt-base.ttl
+	$(ROBOT) annotate --input imt.owl $(ALL_ANNOTATIONS) --output ../../imt.owl
+	$(ROBOT) annotate --input imt.ttl $(ALL_ANNOTATIONS) --output ../../imt.ttl
+	$(ROBOT) annotate --input imt-full.owl $(ALL_ANNOTATIONS) --output ../../imt-full.owl
+	$(ROBOT) annotate --input imt-full.ttl $(ALL_ANNOTATIONS) --output ../../imt-full.ttl
+	$(ROBOT) annotate --input imt-base.owl $(ALL_ANNOTATIONS) --output ../../imt-base.owl
+	$(ROBOT) annotate --input imt-base.ttl $(ALL_ANNOTATIONS) --output ../../imt-base.ttl
 
 all_assets: update-ontology-annotations
