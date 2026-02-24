@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/pmd/imt/imt-base.owl#"
-     xml:base="https://w3id.org/pmd/imt/imt-base.owl"
+<rdf:RDF xmlns="https://w3id.org/pmd/imt/"
+     xml:base="https://w3id.org/pmd/imt/"
      xmlns:co="https://w3id.org/pmd/co/"
      xmlns:dce="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -11,12 +11,15 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:dcterms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://w3id.org/pmd/imt/imt-base.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/imt/releases/2026-02-24/imt-base.owl"/>
+    <owl:Ontology rdf:about="https://w3id.org/pmd/imt/">
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/imt/2026-02-24"/>
         <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
+        <dcterms:bibliographicCitation>imt: Image Transformation Ontology. Version 2026-02-24, https://w3id.org/pmd/imt/</dcterms:bibliographicCitation>
+        <dcterms:created>2026-02-24</dcterms:created>
         <dcterms:description>None</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <dcterms:title>ImageTrans: Application-level ontology for image transformation</dcterms:title>
+        <owl:priorVersion rdf:resource="https://w3id.org/pmd/imt/"/>
         <owl:versionInfo>2026-02-24</owl:versionInfo>
     </owl:Ontology>
     
@@ -54,6 +57,18 @@
     <!-- http://purl.org/dc/elements/1.1/type -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
     
 
 

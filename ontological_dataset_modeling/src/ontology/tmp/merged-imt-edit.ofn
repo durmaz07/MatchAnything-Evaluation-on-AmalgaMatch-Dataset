@@ -253,6 +253,7 @@ Declaration(ObjectProperty(<https://w3id.org/pmd/imt/IMT_0000008>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/imt/IMT_0000009>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/imt/IMT_0000010>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/imt/IMT_0000012>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/imt/IMT_0000023>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/OBI_0001937>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/OBI_0002135>))
 Declaration(DataProperty(<https://w3id.org/pmd/co/PMD_0000006>))
@@ -1119,6 +1120,15 @@ image derived from is a relation between an warped image and an image, which is 
 ObjectPropertyDomain(<https://w3id.org/pmd/imt/IMT_0000012> <http://purl.obolibrary.org/obo/IAO_0000101>)
 ObjectPropertyRange(<https://w3id.org/pmd/imt/IMT_0000012> <http://purl.obolibrary.org/obo/IAO_0000101>)
 
+# Object Property: <https://w3id.org/pmd/imt/IMT_0000023> (spatially coinsides with)
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/imt/IMT_0000023> "spatially coinsides with is a relation between two fields of view of two images which are members of the same matching pair."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000023> "spatially coinsides with"@en)
+SubObjectPropertyOf(<https://w3id.org/pmd/imt/IMT_0000023> <http://purl.obolibrary.org/obo/RO_0002131>)
+SymmetricObjectProperty(<https://w3id.org/pmd/imt/IMT_0000023>)
+ObjectPropertyDomain(<https://w3id.org/pmd/imt/IMT_0000023> <https://w3id.org/pmd/imt/IMT_0000024>)
+ObjectPropertyRange(<https://w3id.org/pmd/imt/IMT_0000023> <https://w3id.org/pmd/imt/IMT_0000024>)
+
 
 ############################
 #   Data Properties
@@ -1662,7 +1672,7 @@ We only deal with intensive (system-size independent) material properties. Exten
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000005> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000005> <http://purl.obolibrary.org/obo/BFO_0000017>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000005> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://w3id.org/pmd/co/PMD_0000950>))
-SubClassOf(<https://w3id.org/pmd/co/PMD_0000005> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000040> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/BFO_0000015>))))
+SubClassOf(Annotation(rdfs:comment "Due to the duality of object and portion of matter this axiom can not be an equivalent class axiom."@en) <https://w3id.org/pmd/co/PMD_0000005> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/BFO_0000015>))))
 
 # Class: <https://w3id.org/pmd/co/PMD_0000008> (process attribute)
 
@@ -1748,7 +1758,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000551> ObjectSomeValuesFrom(<https://w
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000553> "chemical potential"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000553> "The chemical potential is a thermodynamic quality describing the energy change associated with the addition of a small quantity of a substance to a system at constant temperature and pressure."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000553> "true"^^xsd:boolean)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0000553> <https://w3id.org/pmd/co/PMD_0020148>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000553> <https://w3id.org/pmd/co/PMD_0020131>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0000583> (Datenverarbeitung)
 
@@ -2238,6 +2248,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020131> "An intensive quality is a quality that inheres in only portion of matter and thus is independent of the bearers (system-) size."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0020131> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020131> <http://purl.obolibrary.org/obo/BFO_0000019>)
+SubClassOf(Annotation(rdfs:comment "Due to the duality of object and portion of matter this axiom can not be an equivalent class axiom."@en) <https://w3id.org/pmd/co/PMD_0020131> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000080> <https://w3id.org/pmd/co/PMD_0000001>))
 DisjointClasses(<https://w3id.org/pmd/co/PMD_0020131> <https://w3id.org/pmd/co/PMD_0020148>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0020132> (size)
@@ -2487,6 +2498,7 @@ SubClassOf(<https://w3id.org/pmd/imt/IMT_0000000> <http://purl.obolibrary.org/ob
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000002> "matching pair"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000002> "Matching pair is a data set which has exactly two 2D data items as its members, where one of the members is a target, and another one is a source. Here, the source image is to be mapped to the coordinate system (image scene) of a target image."@en)
+EquivalentClasses(<https://w3id.org/pmd/imt/IMT_0000002> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000100> ObjectSomeValuesFrom(<https://w3id.org/pmd/imt/IMT_0000008> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000101> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> ObjectIntersectionOf(<https://w3id.org/pmd/imt/IMT_0000024> ObjectSomeValuesFrom(<https://w3id.org/pmd/imt/IMT_0000023> ObjectIntersectionOf(<https://w3id.org/pmd/imt/IMT_0000024> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000004> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000101> ObjectSomeValuesFrom(<https://w3id.org/pmd/imt/IMT_0000010> <http://purl.obolibrary.org/obo/IAO_0000100>)))))))))))
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000002> <http://purl.obolibrary.org/obo/IAO_0000100>)
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000002> ObjectSomeValuesFrom(<https://w3id.org/pmd/imt/IMT_0000007> <https://w3id.org/pmd/co/PMD_0000502>))
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000002> ObjectSomeValuesFrom(<https://w3id.org/pmd/imt/IMT_0000008> <https://w3id.org/pmd/co/PMD_0000502>))
@@ -2530,35 +2542,35 @@ SubClassOf(<https://w3id.org/pmd/imt/IMT_0000013> <https://w3id.org/pmd/imt/IMT_
 
 # Class: <https://w3id.org/pmd/imt/IMT_0000014> (transformation model)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000014> "transformation model"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000014> "transformation model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000014> "Transformation model is a universal geometric archetype selected to govern the relationship between two visual spaces. It is a specified input to a transformation model parametrization."@en)
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000014> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <https://w3id.org/pmd/imt/IMT_0000015> (homography)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000015> "homography"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000015> "A homography is a transofrmation modle which is used for continuous mapping of a planar information content entity from one perspective to another."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000015> "homography"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000015> "A homography is a transofrmation model which is used for continuous mapping of a planar information content entity from one perspective to another."@en)
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000015> <https://w3id.org/pmd/imt/IMT_0000014>)
 
 # Class: <https://w3id.org/pmd/imt/IMT_0000016> (transformation model parametrization)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000016> "transformation model parametrization"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000016> "transformation model parametrization"@en)
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000016> <https://w3id.org/pmd/co/PMD_0000583>)
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000016> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000293> <https://w3id.org/pmd/imt/IMT_0000005>))
 
 # Class: <https://w3id.org/pmd/imt/IMT_0000017> (point correspondences acquisition)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://w3id.org/pmd/imt/IMT_0000017> "https://arxiv.org/pdf/2505.16599")
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000017> "point correspondences acquisition"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000017> "point correspondences acquisition"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000017> "Point correspondences acquisition is a computing process which has two images with different imaging scenes as specified inputs and a point correspondences data set as a specified output. It includes expatraction and matching of the points from the images, as well as removal of outlier points."@en)
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000017> <https://w3id.org/pmd/co/PMD_0000583>)
-SubClassOf(<https://w3id.org/pmd/imt/IMT_0000017> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000299> <https://w3id.org/pmd/imt/IMT_0000005>) ObjectExactCardinality(2 <http://purl.obolibrary.org/obo/OBI_0000293> <http://purl.obolibrary.org/obo/IAO_0000101>)))
+SubClassOf(<https://w3id.org/pmd/imt/IMT_0000017> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000293> <https://w3id.org/pmd/imt/IMT_0000002>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000299> <https://w3id.org/pmd/imt/IMT_0000005>)))
 
-# Class: <https://w3id.org/pmd/imt/IMT_0000018> (deep-learning point correspondences acquisition)
+# Class: <https://w3id.org/pmd/imt/IMT_0000018> (computational point correspondences acquisition)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000018> "deep-learning point correspondences acquisition"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/imt/IMT_0000018> "automated point correspondences acquisition")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000018> "Deep-learning point correspondences acquisition is point correspondences acquisition, where the estimation of point correspondences data set is perfomed using neural networks, which map points from one image to another."@en)
-SubClassOf(<https://w3id.org/pmd/imt/IMT_0000018> <https://w3id.org/pmd/co/PMD_0000594>)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000018> "computational point correspondences acquisition"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/imt/IMT_0000018> "automated point correspondences acquisition"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000018> "Computational point correspondences acquisition is point correspondences acquisition, where the estimation of point correspondences data set is perfomed using SIFT, neural networks, etc. which map points from one image to another."@en)
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000018> <https://w3id.org/pmd/imt/IMT_0000017>)
 
 # Class: <https://w3id.org/pmd/imt/IMT_0000019> (parameterized transofrmation model)

@@ -12,12 +12,12 @@
 @base <https://w3id.org/pmd/imt/imt-base.ttl> .
 
 <https://w3id.org/pmd/imt/imt-base.ttl> rdf:type owl:Ontology ;
-                                         owl:versionIRI <https://w3id.org/pmd/imt/releases/2026-02-19/imt-base.ttl> ;
+                                         owl:versionIRI <https://w3id.org/pmd/imt/releases/2026-02-24/imt-base.ttl> ;
                                          dce:type obo:IAO_8000001 ;
                                          dcterms:description "None" ;
                                          dcterms:license <https://creativecommons.org/licenses/unspecified> ;
                                          dcterms:title "ImageTrans: Application-level ontology for image transformation" ;
-                                         owl:versionInfo "2026-02-19" .
+                                         owl:versionInfo "2026-02-24" .
 
 #################################################################
 #    Annotation properties
@@ -152,6 +152,10 @@ obo:RO_0000080 rdf:type owl:ObjectProperty .
 
 ###  http://purl.obolibrary.org/obo/RO_0000086
 obo:RO_0000086 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002131
+obo:RO_0002131 rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002350
@@ -336,6 +340,16 @@ RO's 'quality of' is functional i.e., a->b, a->c => b=c. The functionality is re
 image derived from is a relation between an warped image and an image, which is a source member if the matching pair that is a specified input to the image transofrmation process."""@en .
 
 
+###  https://w3id.org/pmd/imt/IMT_0000023
+<https://w3id.org/pmd/imt/IMT_0000023> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf obo:RO_0002131 ;
+                                       rdf:type owl:SymmetricProperty ;
+                                       rdfs:domain <https://w3id.org/pmd/imt/IMT_0000024> ;
+                                       rdfs:range <https://w3id.org/pmd/imt/IMT_0000024> ;
+                                       rdfs:comment "spatially coinsides with is a relation between two fields of view of two images which are members of the same matching pair."@en ;
+                                       rdfs:label "spatially coinsides with"@en .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -480,17 +494,7 @@ co:PMD_0000005 rdf:type owl:Class ;
                                  owl:onProperty obo:BFO_0000054 ;
                                  owl:someValuesFrom co:PMD_0000950
                                ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty obo:RO_0000052 ;
-                                 owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000040
-                                                                           [ rdf:type owl:Restriction ;
-                                                                             owl:onProperty obo:RO_0000056 ;
-                                                                             owl:someValuesFrom obo:BFO_0000015
-                                                                           ]
-                                                                         ) ;
-                                                      rdf:type owl:Class
-                                                    ]
-                               ] ;
+                               _:genid17 ;
                rdfs:comment """Technical materials are complex object aggregates. The properties that are determined for those object aggregates are intrinsically associated with the methodologies employed in the measurement process. This is in contrast to typical 'physical' properties, which like e.g. mass that can be determined to high accuracy independently of the measurement process. 
 As a consequence, the behavoiral material properties in the ontology are differeciated according to their measurement method, e.g. Brinell hardness and Vickers hardness are different types of indentation hardness rather than different measures/quantification (GDC) of the materials property 'indentation hardness'.
  The 'unit idenifieres' of such properties (e.g. \"HV1\", \"HV10\", \"HBW\") are strictly speaking not units but rather references to the measurement methodology used to determine a numeric value that quantifies the property."""@en ;
@@ -501,6 +505,24 @@ As a consequence, the behavoiral material properties in the ontology are differe
 
 We only deal with intensive (system-size independent) material properties. Extensive properties that depend on the testpiece/specimen/probe size should be found in the respective testing method modules."""@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
+
+_:genid17 rdf:type owl:Restriction ;
+           owl:onProperty obo:RO_0000052 ;
+           owl:someValuesFrom [ owl:intersectionOf ( co:PMD_0000001
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty obo:RO_0000056 ;
+                                                       owl:someValuesFrom obo:BFO_0000015
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource co:PMD_0000005 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget _:genid17 ;
+   rdfs:comment "Due to the duality of object and portion of matter this axiom can not be an equivalent class axiom."@en
+ ] .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000008
@@ -655,7 +677,7 @@ See the pattern example of composition to underatand the difference between comp
 
 ###  https://w3id.org/pmd/co/PMD_0000553
 co:PMD_0000553 rdf:type owl:Class ;
-               rdfs:subClassOf co:PMD_0020148 ;
+               rdfs:subClassOf co:PMD_0020131 ;
                rdfs:label "chemical potential"@en ;
                skos:definition "The chemical potential is a thermodynamic quality describing the energy change associated with the addition of a small quantity of a substance to a system at constant temperature and pressure."@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
@@ -1364,12 +1386,24 @@ co:PMD_0020116 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/co/PMD_0020131
 co:PMD_0020131 rdf:type owl:Class ;
-               rdfs:subClassOf obo:BFO_0000019 ;
+               rdfs:subClassOf obo:BFO_0000019 ,
+                               _:genid155 ;
                owl:disjointWith co:PMD_0020148 ;
                rdfs:label "intensive quality"@en ;
                skos:altLabel "Point property"@en ;
                skos:definition "An intensive quality is a quality that inheres in only portion of matter and thus is independent of the bearers (system-) size."@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
+
+_:genid155 rdf:type owl:Restriction ;
+            owl:onProperty obo:RO_0000080 ;
+            owl:someValuesFrom co:PMD_0000001 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource co:PMD_0020131 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget _:genid155 ;
+   rdfs:comment "Due to the duality of object and portion of matter this axiom can not be an equivalent class axiom."@en
+ ] .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020132
@@ -1700,6 +1734,42 @@ co:PMD_0060009 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/imt/IMT_0000002
 <https://w3id.org/pmd/imt/IMT_0000002> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( obo:IAO_0000100
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/pmd/imt/IMT_0000008> ;
+                                                                                    owl:someValuesFrom [ owl:intersectionOf ( obo:IAO_0000101
+                                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                                owl:onProperty obo:IAO_0000136 ;
+                                                                                                                                owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/imt/IMT_0000024>
+                                                                                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                                                                                            owl:onProperty <https://w3id.org/pmd/imt/IMT_0000023> ;
+                                                                                                                                                                            owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/imt/IMT_0000024>
+                                                                                                                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                                                                                                                        owl:onProperty co:PMD_0000004 ;
+                                                                                                                                                                                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:IAO_0000101
+                                                                                                                                                                                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                                                                                                                                                                                    owl:onProperty <https://w3id.org/pmd/imt/IMT_0000010> ;
+                                                                                                                                                                                                                                                                    owl:someValuesFrom obo:IAO_0000100
+                                                                                                                                                                                                                                                                  ]
+                                                                                                                                                                                                                                                                ) ;
+                                                                                                                                                                                                                                             rdf:type owl:Class
+                                                                                                                                                                                                                                           ]
+                                                                                                                                                                                                                      ]
+                                                                                                                                                                                                                    ) ;
+                                                                                                                                                                                                 rdf:type owl:Class
+                                                                                                                                                                                               ]
+                                                                                                                                                                          ]
+                                                                                                                                                                        ) ;
+                                                                                                                                                     rdf:type owl:Class
+                                                                                                                                                   ]
+                                                                                                                              ]
+                                                                                                                            ) ;
+                                                                                                         rdf:type owl:Class
+                                                                                                       ]
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
                                        rdfs:subClassOf obo:IAO_0000100 ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <https://w3id.org/pmd/imt/IMT_0000007> ;
@@ -1707,7 +1777,35 @@ co:PMD_0060009 rdf:type owl:Class ;
                                                        ] ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <https://w3id.org/pmd/imt/IMT_0000008> ;
-                                                         owl:someValuesFrom co:PMD_0000502
+                                                         owl:someValuesFrom [ owl:intersectionOf ( obo:IAO_0000101
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty obo:IAO_0000136 ;
+                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/imt/IMT_0000024>
+                                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                                 owl:onProperty <https://w3id.org/pmd/imt/IMT_0000023> ;
+                                                                                                                                                 owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/imt/IMT_0000024>
+                                                                                                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                                                                                                             owl:onProperty co:PMD_0000004 ;
+                                                                                                                                                                                             owl:someValuesFrom [ owl:intersectionOf ( obo:IAO_0000101
+                                                                                                                                                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                                                                                                                                                         owl:onProperty <https://w3id.org/pmd/imt/IMT_0000010> ;
+                                                                                                                                                                                                                                         owl:someValuesFrom obo:IAO_0000100
+                                                                                                                                                                                                                                       ]
+                                                                                                                                                                                                                                     ) ;
+                                                                                                                                                                                                                  rdf:type owl:Class
+                                                                                                                                                                                                                ]
+                                                                                                                                                                                           ]
+                                                                                                                                                                                         ) ;
+                                                                                                                                                                      rdf:type owl:Class
+                                                                                                                                                                    ]
+                                                                                                                                               ]
+                                                                                                                                             ) ;
+                                                                                                                          rdf:type owl:Class
+                                                                                                                        ]
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ]
                                                        ] ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty obo:RO_0002351 ;
@@ -1778,7 +1876,8 @@ co:PMD_0060009 rdf:type owl:Class ;
                                                                                 ) ;
                                                              rdf:type owl:Class
                                                            ] ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000005> ,
+                                       rdfs:subClassOf obo:IAO_0000101 ,
+                                                       <https://w3id.org/pmd/imt/IMT_0000005> ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty obo:OBI_0000312 ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000018>
@@ -1790,14 +1889,15 @@ co:PMD_0060009 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/imt/IMT_0000014
 <https://w3id.org/pmd/imt/IMT_0000014> rdf:type owl:Class ;
                                        rdfs:subClassOf obo:IAO_0000030 ;
-                                       rdfs:label "transformation model"@de .
+                                       rdfs:label "transformation model"@en ;
+                                       skos:definition "Transformation model is a universal geometric archetype selected to govern the relationship between two visual spaces. It is a specified input to a transformation model parametrization."@en .
 
 
 ###  https://w3id.org/pmd/imt/IMT_0000015
 <https://w3id.org/pmd/imt/IMT_0000015> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000014> ;
-                                       rdfs:label "homography"@de ;
-                                       skos:definition "A homography is a transofrmation modle which is used for continuous mapping of a planar information content entity from one perspective to another."@en .
+                                       rdfs:label "homography"@en ;
+                                       skos:definition "A homography is a transofrmation model which is used for continuous mapping of a planar information content entity from one perspective to another."@en .
 
 
 ###  https://w3id.org/pmd/imt/IMT_0000016
@@ -1807,36 +1907,34 @@ co:PMD_0060009 rdf:type owl:Class ;
                                                          owl:onProperty obo:OBI_0000293 ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000005>
                                                        ] ;
-                                       rdfs:label "transformation model parametrization"@de .
+                                       rdfs:label "transformation model parametrization"@en .
 
 
 ###  https://w3id.org/pmd/imt/IMT_0000017
 <https://w3id.org/pmd/imt/IMT_0000017> rdf:type owl:Class ;
                                        rdfs:subClassOf co:PMD_0000583 ,
                                                        [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                owl:onProperty obo:OBI_0000299 ;
-                                                                                owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000005>
+                                                                                owl:onProperty obo:OBI_0000293 ;
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000002>
                                                                               ]
                                                                               [ rdf:type owl:Restriction ;
-                                                                                owl:onProperty obo:OBI_0000293 ;
-                                                                                owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                                                                owl:onClass obo:IAO_0000101
+                                                                                owl:onProperty obo:OBI_0000299 ;
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000005>
                                                                               ]
                                                                             ) ;
                                                          rdf:type owl:Class
                                                        ] ;
                                        obo:IAO_0000119 "https://arxiv.org/pdf/2505.16599" ;
-                                       rdfs:label "point correspondences acquisition"@de ;
+                                       rdfs:label "point correspondences acquisition"@en ;
                                        skos:definition "Point correspondences acquisition is a computing process which has two images with different imaging scenes as specified inputs and a point correspondences data set as a specified output. It includes expatraction and matching of the points from the images, as well as removal of outlier points."@en .
 
 
 ###  https://w3id.org/pmd/imt/IMT_0000018
 <https://w3id.org/pmd/imt/IMT_0000018> rdf:type owl:Class ;
-                                       rdfs:subClassOf co:PMD_0000594 ,
-                                                       <https://w3id.org/pmd/imt/IMT_0000017> ;
-                                       rdfs:label "deep-learning point correspondences acquisition"@de ;
-                                       skos:altLabel "automated point correspondences acquisition" ;
-                                       skos:definition "Deep-learning point correspondences acquisition is point correspondences acquisition, where the estimation of point correspondences data set is perfomed using neural networks, which map points from one image to another."@en .
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000017> ;
+                                       rdfs:label "computational point correspondences acquisition"@en ;
+                                       skos:altLabel "automated point correspondences acquisition"@en ;
+                                       skos:definition "Computational point correspondences acquisition is point correspondences acquisition, where the estimation of point correspondences data set is perfomed using SIFT, neural networks, etc. which map points from one image to another."@en .
 
 
 ###  https://w3id.org/pmd/imt/IMT_0000019
@@ -1868,7 +1966,8 @@ co:PMD_0060009 rdf:type owl:Class ;
                                                                                 ) ;
                                                              rdf:type owl:Class
                                                            ] ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000005> ,
+                                       rdfs:subClassOf obo:IAO_0000101 ,
+                                                       <https://w3id.org/pmd/imt/IMT_0000005> ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty obo:OBI_0000312 ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000004>

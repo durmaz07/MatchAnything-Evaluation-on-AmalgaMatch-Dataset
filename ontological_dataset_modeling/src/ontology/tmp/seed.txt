@@ -145,6 +145,7 @@ http://usefulinc.com/ns/doap#repository
 http://www.geneontology.org/formats/oboInOwl#hasDbXref
 http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
 http://www.w3.org/2000/01/rdf-schema#Literal
+http://www.w3.org/2000/01/rdf-schema#subClassOf
 http://www.w3.org/2000/01/rdf-schema#subPropertyOf
 http://www.w3.org/2004/02/skos/core#altLabel
 http://www.w3.org/2004/02/skos/core#definition
@@ -322,6 +323,7 @@ https://w3id.org/pmd/imt/IMT_0000019
 https://w3id.org/pmd/imt/IMT_0000020
 https://w3id.org/pmd/imt/IMT_0000021
 https://w3id.org/pmd/imt/IMT_0000022
+https://w3id.org/pmd/imt/IMT_0000023
 https://w3id.org/pmd/imt/IMT_0000024
 https://www.merriam-webster.com/dictionary/width
 term

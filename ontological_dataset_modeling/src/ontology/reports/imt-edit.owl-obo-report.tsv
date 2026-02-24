@@ -16,11 +16,12 @@ WARN	missing_definition	transformation model	definition
 WARN	missing_definition	homography	definition	
 WARN	missing_definition	transformation model parametrization	definition	
 WARN	missing_definition	point correspondences acquisition	definition	
-WARN	missing_definition	deep-learning point correspondences acquisition	definition	
+WARN	missing_definition	computational point correspondences acquisition	definition	
 WARN	missing_definition	parameterized transofrmation model	definition	
 WARN	missing_definition	manually created point correspondences	definition	
 WARN	missing_definition	inlier point correspondence	definition	
 WARN	missing_definition	outlier point correspondence	definition	
+WARN	missing_definition	spatially coinsides with	definition	
 WARN	missing_definition	field of view	definition	
 WARN	missing_obsolete_label	coordinate system	rdfs:label	coordinate system@en
 WARN	missing_obsolete_label	has coordinate system	rdfs:label	has coordinate system@en

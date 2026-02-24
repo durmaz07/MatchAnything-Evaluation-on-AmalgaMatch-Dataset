@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/pmd/imt/imports/pmdco_import.owl>
-<https://w3id.org/pmd/imt/releases/2026-02-19/imports/pmdco_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/co/releases/2026-02-19/pmdco.ttl>)
-Annotation(owl:versionInfo "2026-02-19")
+<https://w3id.org/pmd/imt/releases/2026-02-24/imports/pmdco_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/co/releases/2026-02-24/pmdco.ttl>)
+Annotation(owl:versionInfo "2026-02-24")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -1521,7 +1521,7 @@ We only deal with intensive (system-size independent) material properties. Exten
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000005> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000005> <http://purl.obolibrary.org/obo/BFO_0000017>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000005> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://w3id.org/pmd/co/PMD_0000950>))
-SubClassOf(<https://w3id.org/pmd/co/PMD_0000005> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000040> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/BFO_0000015>))))
+SubClassOf(Annotation(rdfs:comment "Due to the duality of object and portion of matter this axiom can not be an equivalent class axiom."@en) <https://w3id.org/pmd/co/PMD_0000005> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/BFO_0000015>))))
 
 # Class: <https://w3id.org/pmd/co/PMD_0000008> (process attribute)
 
@@ -1607,7 +1607,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000551> ObjectSomeValuesFrom(<https://w
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000553> "chemical potential"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000553> "The chemical potential is a thermodynamic quality describing the energy change associated with the addition of a small quantity of a substance to a system at constant temperature and pressure."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000553> "true"^^xsd:boolean)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0000553> <https://w3id.org/pmd/co/PMD_0020148>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000553> <https://w3id.org/pmd/co/PMD_0020131>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0000583> (Datenverarbeitung)
 
@@ -1809,7 +1809,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000874> "Ein Mikroskop, das sichtbares Licht und Linsen verwendet, um kleine Objekte oder Details zu vergrößern und zu betrachten."@de)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000874> <https://w3id.org/pmd/co/PMD_0000855>)
 
-# Class: <https://w3id.org/pmd/co/PMD_0000875> (Optische Mikroskopie)
+# Class: <https://w3id.org/pmd/co/PMD_0000875> (optical microscopy)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000875> "Optische Mikroskopie"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000875> "optical microscopy"@en)
@@ -1901,7 +1901,7 @@ EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000950> ObjectIntersectionOf(<ht
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000950> <http://purl.obolibrary.org/obo/BFO_0000015>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000950> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000016> <https://w3id.org/pmd/co/PMD_0000005>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <https://w3id.org/pmd/co/PMD_0000001>))))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000957> (structural property analyzing process)
+# Class: <https://w3id.org/pmd/co/PMD_0000957> (Struktur Eigenschaften Analyseverfahren)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000957> "Struktur Eigenschaften Analyseverfahren"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000957> "structural property analyzing process"@en)
@@ -2097,6 +2097,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020131> "An intensive quality is a quality that inheres in only portion of matter and thus is independent of the bearers (system-) size."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0020131> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020131> <http://purl.obolibrary.org/obo/BFO_0000019>)
+SubClassOf(Annotation(rdfs:comment "Due to the duality of object and portion of matter this axiom can not be an equivalent class axiom."@en) <https://w3id.org/pmd/co/PMD_0020131> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000080> <https://w3id.org/pmd/co/PMD_0000001>))
 DisjointClasses(<https://w3id.org/pmd/co/PMD_0020131> <https://w3id.org/pmd/co/PMD_0020148>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0020132> (size)
