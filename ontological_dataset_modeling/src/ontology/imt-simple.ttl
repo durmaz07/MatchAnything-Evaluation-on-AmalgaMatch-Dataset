@@ -910,8 +910,8 @@ image derived from is a relation between an warped image and an image, which is 
                                        rdf:type owl:SymmetricProperty ;
                                        rdfs:domain <https://w3id.org/pmd/imt/IMT_0000024> ;
                                        rdfs:range <https://w3id.org/pmd/imt/IMT_0000024> ;
-                                       rdfs:comment "spatially coinsides with is a relation between two fields of view of two images which are members of the same matching pair."@en ;
-                                       rdfs:label "spatially coinsides with"@en .
+                                       rdfs:comment "spatially coincides with is a relation between two fields of view of two images which are members of the same matching pair."@en ;
+                                       rdfs:label "spatially coincides with"@en .
 
 
 #################################################################

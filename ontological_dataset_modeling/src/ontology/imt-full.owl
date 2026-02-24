@@ -1365,8 +1365,8 @@ image derived from is a relation between an warped image and an image, which is 
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/pmd/imt/IMT_0000024"/>
         <rdfs:range rdf:resource="https://w3id.org/pmd/imt/IMT_0000024"/>
-        <rdfs:comment xml:lang="en">spatially coinsides with is a relation between two fields of view of two images which are members of the same matching pair.</rdfs:comment>
-        <rdfs:label xml:lang="en">spatially coinsides with</rdfs:label>
+        <rdfs:comment xml:lang="en">spatially coincides with is a relation between two fields of view of two images which are members of the same matching pair.</rdfs:comment>
+        <rdfs:label xml:lang="en">spatially coincides with</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -4074,57 +4074,6 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
     <!-- https://w3id.org/pmd/imt/IMT_0000002 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000002">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000100"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/pmd/imt/IMT_0000008"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000101"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Class>
-                                                <owl:intersectionOf rdf:parseType="Collection">
-                                                    <rdf:Description rdf:about="https://w3id.org/pmd/imt/IMT_0000024"/>
-                                                    <owl:Restriction>
-                                                        <owl:onProperty rdf:resource="https://w3id.org/pmd/imt/IMT_0000023"/>
-                                                        <owl:someValuesFrom>
-                                                            <owl:Class>
-                                                                <owl:intersectionOf rdf:parseType="Collection">
-                                                                    <rdf:Description rdf:about="https://w3id.org/pmd/imt/IMT_0000024"/>
-                                                                    <owl:Restriction>
-                                                                        <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000004"/>
-                                                                        <owl:someValuesFrom>
-                                                                            <owl:Class>
-                                                                                <owl:intersectionOf rdf:parseType="Collection">
-                                                                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000101"/>
-                                                                                    <owl:Restriction>
-                                                                                        <owl:onProperty rdf:resource="https://w3id.org/pmd/imt/IMT_0000010"/>
-                                                                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
-                                                                                    </owl:Restriction>
-                                                                                </owl:intersectionOf>
-                                                                            </owl:Class>
-                                                                        </owl:someValuesFrom>
-                                                                    </owl:Restriction>
-                                                                </owl:intersectionOf>
-                                                            </owl:Class>
-                                                        </owl:someValuesFrom>
-                                                    </owl:Restriction>
-                                                </owl:intersectionOf>
-                                            </owl:Class>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4146,7 +4095,7 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="https://w3id.org/pmd/imt/IMT_0000024"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="https://w3id.org/pmd/imt/IMT_0000023"/>
+                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
                                                 <owl:someValuesFrom>
                                                     <owl:Class>
                                                         <owl:intersectionOf rdf:parseType="Collection">
@@ -4159,7 +4108,7 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
                                                                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000101"/>
                                                                             <owl:Restriction>
                                                                                 <owl:onProperty rdf:resource="https://w3id.org/pmd/imt/IMT_0000010"/>
-                                                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+                                                                                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/imt/IMT_0000002"/>
                                                                             </owl:Restriction>
                                                                         </owl:intersectionOf>
                                                                     </owl:Class>
