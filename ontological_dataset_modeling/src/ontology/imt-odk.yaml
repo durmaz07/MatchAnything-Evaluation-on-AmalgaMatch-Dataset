@@ -1,8 +1,9 @@
 id: imt
 title: "ImageTrans: Application-level ontology for image transformation"
-github_org: cmllezr
+# github_org: cmllezr
+license: https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
 git_main_branch: main
-repo: ImageTrans
+repo: MatchAnything-Evaluation-on-AmalgaMatch-Dataset
 uribase: https://w3id.org/pmd
 uribase_suffix: imt
 preferredPrefix: IMT
