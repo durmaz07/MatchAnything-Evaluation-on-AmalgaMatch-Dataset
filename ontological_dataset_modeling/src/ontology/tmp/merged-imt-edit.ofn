@@ -123,7 +123,6 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0001018>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0001019>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0001020>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020003>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0020004>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020005>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020023>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020099>))
@@ -144,7 +143,6 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0020216>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020220>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020243>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025001>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0025002>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025003>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025005>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025008>))
@@ -152,7 +150,6 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0025012>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025016>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025017>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025018>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0025997>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0040001>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0050051>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0050153>))
@@ -1658,19 +1655,20 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000001> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000001> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
-# Class: <https://w3id.org/pmd/co/PMD_0000005> (behavioral material property)
+# Class: <https://w3id.org/pmd/co/PMD_0000005> (material property)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0000005> "Technical materials are complex object aggregates. The properties that are determined for those object aggregates are intrinsically associated with the methodologies employed in the measurement process. This is in contrast to typical 'physical' properties, which like e.g. mass that can be determined to high accuracy independently of the measurement process. 
-As a consequence, the behavoiral material properties in the ontology are differeciated according to their measurement method, e.g. Brinell hardness and Vickers hardness are different types of indentation hardness rather than different measures/quantification (GDC) of the materials property 'indentation hardness'.
- The 'unit idenifieres' of such properties (e.g. \"HV1\", \"HV10\", \"HBW\") are strictly speaking not units but rather references to the measurement methodology used to determine a numeric value that quantifies the property."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000005> "behavioral material property"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000005> "A property is a material trait in terms of the kind and magnitude of response to a specific imposed stimulus. Generally, definitions of properties are made independent of material shape and size.
-
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0000005> "A property is a material trait in terms of the kind and magnitude of response to a specific imposed stimulus. Generally, definitions of properties are made independent of material shape and size.
 (Callister, W.D., Rethwisch, D.G., Materials Science and Engineering, Wiley, 2014)
 
-We only deal with intensive (system-size independent) material properties. Extensive properties that depend on the testpiece/specimen/probe size should be found in the respective testing method modules."@en)
+Technical materials are complex aggregates. Many properties that are determined for those aggregates are intrinsically associated with the methodologies employed in the measurement process. This is in contrast to typical 'physical' properties, which like e.g. mass that can be determined to high accuracy independently of the measurement process. 
+As a consequence, material properties in the ontology are differeciated according to their measurement method, e.g. Brinell hardness and Vickers hardness are different types of indentation hardness rather than different measures/quantification (GDC) of the materials property 'indentation hardness'.
+ The 'unit idenifieres' of such properties (e.g. \"HV1\", \"HV10\", \"HBW\") are strictly speaking not units but rather references to the measurement methodology used to determine a numeric value that quantifies the property.
+
+Extensive properties that depend on the object being tested rather than on the portion of matter are (extensive) object- or system-properties."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000005> "material property"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000005> "a disposition of a portion of matter that is realized in a compatible process and whose realization is grounded in the portions intensive qualities"@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000005> "true"^^xsd:boolean)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0000005> <http://purl.obolibrary.org/obo/BFO_0000017>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000005> <http://purl.obolibrary.org/obo/BFO_0000016>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000005> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://w3id.org/pmd/co/PMD_0000950>))
 SubClassOf(Annotation(rdfs:comment "Due to the duality of object and portion of matter this axiom can not be an equivalent class axiom."@en) <https://w3id.org/pmd/co/PMD_0000005> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/BFO_0000015>))))
 
@@ -1703,14 +1701,14 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000068> ObjectSomeValuesFrom(<https://w
 # Class: <https://w3id.org/pmd/co/PMD_0000501> (1D)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000501> "1D"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000501> "1-D is an information content entity representing a one-dimensional structure or model representing a single linear dimension, often used in material science simulations or analysis."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000501> "1D is a data item representing a one-dimensional structure or model representing a single linear dimension, often used in material science simulations or analysis."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000501> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000501> <http://purl.obolibrary.org/obo/IAO_0000027>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0000502> (2D)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000502> "2D"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000502> "A two-dimensional information content entity is a representation or analysis, commonly applied in studying planar material properties or surface phenomena."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000502> "A two-dimensional data item is a representation or analysis, commonly applied in studying planar material properties or surface phenomena."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000502> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000502> <http://purl.obolibrary.org/obo/IAO_0000027>)
 
@@ -1751,12 +1749,11 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000551> "true"^^xsd:boolean)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000064> <https://w3id.org/pmd/co/PMD_0000551> "Material has quality chemical composition. Chemical composition is a subject of chemical composition data item. Chemical composition data item has members fraction value specifications (which have a numeral and a unit). Material has part portion of carbon. Material has relational quality mass proportion. Portion of carbon  has relational quality mass proportion. Mass propotion is specified by value fraction value specification. Same approach for all chemical elements."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000551> <https://w3id.org/pmd/co/PMD_0025001>)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0000551> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000004> <https://w3id.org/pmd/co/PMD_0025002>))
 
 # Class: <https://w3id.org/pmd/co/PMD_0000553> (chemical potential)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000553> "chemical potential"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000553> "The chemical potential is a thermodynamic quality describing the energy change associated with the addition of a small quantity of a substance to a system at constant temperature and pressure."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000553> "an intensive quality of a thermodynamic system describing the energy change associated with the addition of a small quantity of a substance to a system at constant temperature and pressure."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000553> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000553> <https://w3id.org/pmd/co/PMD_0020131>)
 
@@ -1773,8 +1770,9 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000583> ObjectIntersectionOf(ObjectSome
 
 # Class: <https://w3id.org/pmd/co/PMD_0000591> (crystal structure)
 
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0000591> "The finite set of periodic geometric arrangements is described e.g. by the 14 possible Bravais Lattices in three-dimensional space."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000591> "crystal structure"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000591> "The crystal structure is a morphologic quality that describes the periodic geometric arrangement of entities in a crystalline material. The finite set of periodic geometric arrangements is described by the 14 possible Bravais Lattices in three-dimensional space."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000591> "an intensive qualtty of a crystal that embodies the periodic geometric arrangement of entities in a crystal lattice."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000591> "true"^^xsd:boolean)
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000591> ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020099>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000591> <https://w3id.org/pmd/co/PMD_0020131>)
@@ -1808,7 +1806,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000597> <https://w3id.org/pmd/co/PMD_00
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000602> "Gerät"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000602> "device"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000602> "A physical or virtual entity used to perform a specific function or task, often involving measurement, manipulation, or analysis of materials."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000602> "A device is an object that is designed to perform a specific function or task involving measurement, manipulation, processing, or analysis."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000602> "Ein physisches oder virtuelles Objekt, das verwendet wird, um eine bestimmte Funktion oder Aufgabe auszuführen, häufig im Zusammenhang mit der Messung, Manipulation oder Analyse von Materialien."@de)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000602> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000602> <http://purl.obolibrary.org/obo/BFO_0000030>)
@@ -1825,7 +1823,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000611> ObjectSomeValuesFrom(<http://pu
 # Class: <https://w3id.org/pmd/co/PMD_0000619> (electric potential)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000619> "electric potential"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000619> "The electric potential is a thermodynamic quality describing the amount of work needed to move a unit charge from a reference point to a specific location in an electric field."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000619> "an extensvie quality describing the amount of work needed to move a unit charge from a reference point to a specific location in an electric field."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000619> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000619> <https://w3id.org/pmd/co/PMD_0020148>)
 
@@ -1834,7 +1832,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000619> <https://w3id.org/pmd/co/PMD_00
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://w3id.org/pmd/co/PMD_0000624> "“Electron microscope.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/electron%20microscope. Accessed 24 Nov. 2022."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000624> "Elektronenmikroskop"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000624> "electron microscope"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000624> "A device that uses a beam of electrons to create high-resolution images of a sample's surface or structure."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000624> "A microscope that uses a beam of electrons to create high-resolution images of a sample's surface or structure."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000624> "An electron-optical instrument in which a beam of electrons is used to produce an enlarged image of a minute object."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000624> "Ein Gerät, das einen Elektronenstrahl verwendet, um hochauflösende Bilder der Oberfläche oder Struktur einer Probe zu erstellen."@de)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000624> <https://w3id.org/pmd/co/PMD_0000855>)
@@ -1905,7 +1903,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000833> ObjectSomeValuesFrom(<http://pu
 # Class: <https://w3id.org/pmd/co/PMD_0000834> (map)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000834> "map"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000834> "A map is a 2-D information content entity describing a representation of spatial data or relationships, often used in material science for visualizing properties or distributions."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000834> "A map is a 2D information content entity describing a representation of spatial data or relationships, often used in material science for visualizing properties or distributions."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000834> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000834> <https://w3id.org/pmd/co/PMD_0000502>)
 
@@ -1933,13 +1931,13 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000856> "Microscopy process that uses various types of microscopy techniques to visualize and analyze the microstructure and morphology of materials at different scales."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0000856> "Electron microscopy, which provides detailed images at high resolution; ion microscopy, which offers high-precision imaging and material milling capabilities; and optical microscopy, which uses visible light to study e.g. the microstructure of materials."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0050117> <https://w3id.org/pmd/co/PMD_0000856> "Mikroskopie"@de)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0000856> <https://w3id.org/pmd/co/PMD_0000957>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000856> <http://purl.obolibrary.org/obo/OBI_0000070>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0000857> (microstructure)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0000857> "The focus of interest when looking at an object through the microstructure perspective is often its morphology."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000857> "microstructure"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000857> "The microstructure represents the small-scale structure of a material, including grains, phases, and defects, visible under a microscope."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000857> "A microstructure is a portion of matter that represents the small-scale structure of a material, including grains, phases, and defects, visible under a microscope."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000857> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000857> <https://w3id.org/pmd/co/PMD_0000001>)
 
@@ -1960,7 +1958,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000874> "Ein Mikroskop, das sichtbares Licht und Linsen verwendet, um kleine Objekte oder Details zu vergrößern und zu betrachten."@de)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000874> <https://w3id.org/pmd/co/PMD_0000855>)
 
-# Class: <https://w3id.org/pmd/co/PMD_0000875> (optical microscopy)
+# Class: <https://w3id.org/pmd/co/PMD_0000875> (Optische Mikroskopie)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000875> "Optische Mikroskopie"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000875> "optical microscopy"@en)
@@ -1979,7 +1977,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000885> ObjectIntersectionOf(<https://w
 # Class: <https://w3id.org/pmd/co/PMD_0000890> (connected material entity aggregate)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000890> "connected material entity aggregate"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000890> "A material entity aggregate that is a mereological sum of separate material entities, which adhere to one another through chemical bonds or physical junctions that go beyond gravity."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000890> "An object aggregate that is a mereological sum of separate material entities, which adhere to one another through chemical bonds or physical junctions that go beyond gravity."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0000890> "the atoms of a molecule, the molecules forming the membrane of a cell, the epidermis in a human body"@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000890> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000890> <http://purl.obolibrary.org/obo/BFO_0000027>)
@@ -1987,7 +1985,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000890> <http://purl.obolibrary.org/obo
 # Class: <https://w3id.org/pmd/co/PMD_0000891> (disconnected material entity aggregate)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000891> "disconnected material entity aggregate"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000891> "A material entity aggregate that is a mereological sum of scattered (i.e. spatially separated) material entities, which do not adhere to one another through chemical bonds or physical junctions but, instead, relate to one another merely on grounds of metric proximity. The material entities are separated from one another through space or through other material entities that do not belong to the group."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000891> "An object aggregate that is a mereological sum of scattered (i.e. spatially separated) material entities, which do not adhere to one another through chemical bonds or physical junctions but, instead, relate to one another merely on grounds of metric proximity. The material entities are separated from one another through space or through other material entities that do not belong to the group."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0000891> "a heap of stones, a colony of honeybees, a group of synapses, the trees of a forest, the canopy of a forest, the fish of a shoal, a group of commuters on the subway, the patients in a hospital"@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000891> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000891> <http://purl.obolibrary.org/obo/BFO_0000027>)
@@ -1996,7 +1994,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000891> <http://purl.obolibrary.org/obo
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0000896> "The pressure is commonly measured in Pascals."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000896> "pressure"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000896> "The pressure is a thermodynamic quality describing the force exerted per unit area on a material."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000896> "an intensive quality describing the force exerted per unit area in or on a material."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000896> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000896> <https://w3id.org/pmd/co/PMD_0020131>)
 DisjointClasses(<https://w3id.org/pmd/co/PMD_0000896> <https://w3id.org/pmd/co/PMD_0000967>)
@@ -2030,7 +2028,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000933> <https://w3id.org/pmd/co/PMD_00
 # Class: <https://w3id.org/pmd/co/PMD_0000942> (specific surface area)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000942> "specific surface area"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000942> "The specific surface area is a morphologic quality describing the total surface area of a material per unit of mass or volume."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000942> "an intensive quality embodying the total surface area of a material per unit of mass or volume."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000942> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000942> <https://w3id.org/pmd/co/PMD_0020131>)
 
@@ -2052,7 +2050,7 @@ EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000950> ObjectIntersectionOf(<ht
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000950> <http://purl.obolibrary.org/obo/BFO_0000015>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000950> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000016> <https://w3id.org/pmd/co/PMD_0000005>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <https://w3id.org/pmd/co/PMD_0000001>))))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000957> (structural property analyzing process)
+# Class: <https://w3id.org/pmd/co/PMD_0000957> (Struktur Eigenschaften Analyseverfahren)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000957> "Struktur Eigenschaften Analyseverfahren"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000957> "structural property analyzing process"@en)
@@ -2161,24 +2159,10 @@ AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020003> <http://purl.obolibrary.org/obo/BFO_0000030>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000086> <https://w3id.org/pmd/co/PMD_0000591>))
 
-# Class: <https://w3id.org/pmd/co/PMD_0020004> (composition data item)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://w3id.org/pmd/co/PMD_0020004> "See editior note of composition to underatand the difference between composition and chemical composition data items.
-
-To understand the difference between the composition and the composition data item, one has to understand the difference between SDCs and GDCs in BFO. A triple \"material entity has quality compsition\", conveys the fact such quality exists without telling us what are fractions of compounds in this material entity. A triple \"compostion is subject of composition data item\" conveys that there's an information about values of these fractions. Think of comosition data item as a pdf where the composition is documented."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0020004> "These portions of other matters do not have to be portions of specific chemical elements, i.e., atomic composition, but rather portions of other substances, such as nitric acid and water."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020004> "composition data item"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/co/PMD_0020004> "composition specification"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020004> "Composition data item is an information content entity that is about composition of a material enity. It has members fraction value specifications which specifiy values of propotions of compounds, which are parts of the material enity."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0020004> "Nitric acid solution has quality  composition, and  the composition data item is about this composition.The composition data item has members fraction specifications of nitric acid, e.g., 4 vol.%, and distilled water. These fraction specifications specify value of pure substances of nitric acid and distilled water, respectively. Furthermore, these fraction specifications specify values of relational qualities (volume) proportion of nitric acid and (volume) proportion of distilled water."@en)
-AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0020004> "true"^^xsd:boolean)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020004> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000027> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/co/PMD_0025001>)))
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> <https://w3id.org/pmd/co/PMD_0025997>))
-
 # Class: <https://w3id.org/pmd/co/PMD_0020005> (porosity)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020005> "porosity"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020005> "The porosity is a quality describing the fraction of the materials (enclosing) spatial region occupied by pores."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020005> "itensive quality embodiying the fraction of the materials (enclosing) spatial region occupied by pores."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0020005> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020005> <https://w3id.org/pmd/co/PMD_0020131>)
 
@@ -2221,7 +2205,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0020104> <https://w3id.org/pmd/co/PMD_00
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020106> "polycrystal"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/co/PMD_0020106> "Polycrystalline structure"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020106> "Polycrystal is a connected object aggregate that has continuant part some crystal grains"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020106> "A polycrystal is a connected material entity aggregate that consists of multiple crystal grains joined through crystallographic interfaces."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0020106> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020106> <https://w3id.org/pmd/co/PMD_0000890>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020106> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/co/PMD_0000663>))
@@ -2254,7 +2238,7 @@ DisjointClasses(<https://w3id.org/pmd/co/PMD_0020131> <https://w3id.org/pmd/co/P
 # Class: <https://w3id.org/pmd/co/PMD_0020132> (size)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020132> "size"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020132> "Size is the quality of a material entity that describes its spatial extend."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020132> "an extensive quality of a material entity that describes its spatial extend."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0020132> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020132> <https://w3id.org/pmd/co/PMD_0020148>)
 
@@ -2270,7 +2254,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0020133> <https://w3id.org/pmd/co/PMD_00
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://w3id.org/pmd/co/PMD_0020142> <http://openenergy-platform.org/ontology/oeo/OEO_00000150>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020142> "energy"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020142> "Energy is a quality of material entities which manifests as a capacity to perform work (such as causing motion or the interaction of molecules)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020142> "an extensive quality of material entities which manifests as a capacity to perform work (such as causing motion or the interaction of molecules)"@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0020142> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020142> <https://w3id.org/pmd/co/PMD_0020148>)
 
@@ -2296,8 +2280,10 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0020150> <https://w3id.org/pmd/co/PMD_00
 
 # Class: <https://w3id.org/pmd/co/PMD_0020161> (activity (thermodynamic))
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://w3id.org/pmd/co/PMD_0020161> "old defintion: 
+Activity (a_X) is a relational property between a chemical species X and a non-ideal solution. a_X is a measure of the effective concentration of a chemical species X in the non-ideal solution, accounting for interactions between particles. It is defined as the product of the concentration and an activity coefficient, where the activity coefficient corrects for non-ideal behavior.")
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020161> "activity (thermodynamic)"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020161> "Activity (a_X) is a relational property between a chemical species X and a non-ideal solution. a_X is a measure of the effective concentration of a chemical species X in the non-ideal solution, accounting for interactions between particles. It is defined as the product of the concentration and an activity coefficient, where the activity coefficient corrects for non-ideal behavior."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020161> "Thermodynamic activity is a relational quality that inheres between a chemical species and a non-ideal solution and represents the effective concentration of the species accounting for particle interactions."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020161> <http://purl.obolibrary.org/obo/BFO_0000145>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0020216> (order scale value)
@@ -2319,7 +2305,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0020220> ObjectSomeValuesFrom(<https://w
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://w3id.org/pmd/co/PMD_0020243> "size values of indiviudal grains are properties of the respective objects"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020243> "grain size"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020243> "an average size of the grains of a polycrystal"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020243> "an intensive quality epitomizing the average size of the grains of a polycrystal"@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020243> <https://w3id.org/pmd/co/PMD_0020131>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020243> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000080> <https://w3id.org/pmd/co/PMD_0020106>))
 
@@ -2332,21 +2318,12 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0025001> "true"^^xsd:boolean)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000064> <https://w3id.org/pmd/co/PMD_0025001> "Composition is a collective property of a portion of matter, i.e., the triple portion of matter has quality composition holds. As \"has quality\" is an inverse  functional property, only one instance of portion of matter can have this specific composition. However, proportions describe the relation between the prortion of matter (the whole) and some compound (the part). Thus, the following triples hold: portion of matter has relational quality proportion; portion of matter has part some substance (or whatever is your part); substance has relational quality proportion. \"Has relational quality\" is not inverse functional, i.e., it can point to a single object from 2 distinct subjects."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025001> <https://w3id.org/pmd/co/PMD_0020131>)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0025001> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000004> <https://w3id.org/pmd/co/PMD_0020004>))
-
-# Class: <https://w3id.org/pmd/co/PMD_0025002> (chemical composition data item)
-
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025002> "chemical composition data item"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/co/PMD_0025002> "chemical composition specification"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025002> "Chemical composition data item is an information content entity that is about composition of a portion of matter. It has members fraction value specifications which specifiy values of propotions of portions of (pure) chemical elements, which are parts of the portion of matter."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0025002> "Steel has quality chemical composition , and the chemical composition data item is about the chemical composition .The chemical composition data item has members fraction specifications of iron and carbon. These fraction specifications specify value of portion of iron and portion of carbon respectively. Furthermore, these fraction specifications specify  values of relational qualities (mass) proportion of iron and (mass) proportion of carbon."@en)
-AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0025002> "true"^^xsd:boolean)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0025002> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/co/PMD_0000551>)))
 
 # Class: <https://w3id.org/pmd/co/PMD_0025003> (metallic grain structure)
 
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0025003> "ferrite, austenite, martensite, etc."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025003> "metallic grain structure"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025003> "metallic grain structure characterizes the distinct phases in the microscopic structure of a metallic material. It concretizes ferrite, austenite, martensite, etc."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025003> "intensive quality epitomizing the distinct phases in the microscopic structure of a metallic material."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0025003> "false"^^xsd:boolean)
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0025003> ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020023>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025003> <https://w3id.org/pmd/co/PMD_0020131>)
@@ -2355,7 +2332,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0025003> ObjectSomeValuesFrom(<https://w
 # Class: <https://w3id.org/pmd/co/PMD_0025005> (3D)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025005> "3D"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025005> "A three-dimensional information content entity is a representation or analysis, commonly applied in studying material properties in its volume or describing a dependency of one variable on two other variables."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025005> "A three-dimensional data item is a representation or analysis, commonly applied in studying material properties in its volume or describing a dependency of one variable on two other variables."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0025005> "Orientation distribution function (ODF), potential energy landscape"@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025005> <http://purl.obolibrary.org/obo/IAO_0000027>)
 
@@ -2363,8 +2340,9 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0025005> <http://purl.obolibrary.org/obo
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025008> "Transmissionselektronenmikroskop"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025008> "transmission electron microscope"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025008> "A transmission electron microscope (SEM) is a measuring device that produces high-resolution images of a sample's internal structure by transmitting electrons through the sample."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025008> "Ein Transmissionselektronenmikroskop (TEM) ist ein Messgerät, das hochauflösende Bilder der inneren Struktur einer Probe erzeugt, indem es Elektronen durch die Probe strahlt."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025008> "An electron microscope that produces high-resolution images of a sample's internal structure by transmitting electrons through the sample."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025008> "Ein Elektronenmikroskop, das hochauflösende Bilder der inneren Struktur einer Probe erzeugt, indem es Elektronen durch die Probe strahlt."@de)
+AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0050117> <https://w3id.org/pmd/co/PMD_0025008> "TEM")
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025008> <https://w3id.org/pmd/co/PMD_0000624>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0025012> (analytical calculation)
@@ -2396,15 +2374,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0025018> "Elongation of a specimen after a tensile step, i.e., the specimen before and after the test. Angle between a rolling direction of a rolled material and the longitudinal side of a specimen."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025018> <http://purl.obolibrary.org/obo/BFO_0000145>)
 
-# Class: <https://w3id.org/pmd/co/PMD_0025997> (fraction value specification)
-
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025997> "fraction value specification"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025997> "Fraction value specification is a value specification that contains information about quantitative share of a part relative to a specified whole."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0025997> "2.05 wt.% of carbon in steel, 4 vol.% of nitric acid in a solution"@en)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0025997> <http://purl.obolibrary.org/obo/OBI_0001931>)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0025997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0001927> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025999> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000040> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000040>))))))
-SubClassOf(<https://w3id.org/pmd/co/PMD_0025997> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/RO_0002350> <https://w3id.org/pmd/co/PMD_0020004>))
-
 # Class: <https://w3id.org/pmd/co/PMD_0040001> (length)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0040001> "Length is a size that describes the spatial extent of its bearer in one dimension."@en)
@@ -2428,9 +2397,8 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0050051> <https://w3id.org/pmd/co/PMD_00
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0050153> "Dicke"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0050153> "thickness"@en)
-AnnotationAssertion(rdfs:seeAlso <https://w3id.org/pmd/co/PMD_0050153> <https://w3id.org/pmd/co/2.0.8/Thickness>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0050153> "A length that describes the measured dimension in one direction of a test piece."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0050153> "Diese Klasse beschreibt das gemessene Maß in einer Richtung eines Prüfkörpers."@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0050153> "This class describes the measured dimension in one direction of a test piece."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0050153> <https://w3id.org/pmd/co/PMD_0040001>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0050154> (Breite)
@@ -2449,7 +2417,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://w3id.o
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0050155> "Form"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0050155> "shape"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0050155> "Das sichtbare Ausstattungsmerkmal (räumliche Form oder Kontur) eines bestimmten Objektes oder einer Art von Objekt."@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0050155> "The visible makeup characteristic (spatial form or contour) of a particular item or kind of item.a"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0050155> "Extemsive quality, the visible makeup characteristic (spatial form or contour) of a particular item or kind of item."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0050155> <https://w3id.org/pmd/co/PMD_0020148>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0050156> (Geometrische Form)
@@ -2480,9 +2448,9 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0060007> <http://purl.obolibrary.org/obo
 
 # Class: <https://w3id.org/pmd/co/PMD_0060009> (specification datum)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0060009> "The intend of the specification datum is to express the \"Sollwert\" of some qualitiy or behavioral material property. Then, the specification datum can be further specified by  some value specification."@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0060009> "The intent of the specification datum is to express the \"Sollwert\" of some qualitiy or behavioral material property. Then, the specification datum can be further specified by  some value specification."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0060009> "specification datum"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0060009> "Specification datum is a data item that provides an information of a setpoint of some value, i.e., it is an intended value."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0060009> "A directive information entity that provides information of a setpoint of some value, i.e., it is an intended value."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0060009> "The setpoint value of a ultimate tensile strength of some steel material"@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0060009> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0060009> <http://purl.obolibrary.org/obo/IAO_0000033>)

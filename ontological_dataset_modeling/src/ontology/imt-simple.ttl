@@ -14,11 +14,11 @@
 @base <https://w3id.org/pmd/imt/imt-simple.ttl> .
 
 <https://w3id.org/pmd/imt/imt-simple.ttl> rdf:type owl:Ontology ;
-                                           owl:versionIRI <https://w3id.org/pmd/imt/releases/2026-02-24/imt-simple.ttl> ;
+                                           owl:versionIRI <https://w3id.org/pmd/imt/releases/2026-03-09/imt-simple.ttl> ;
                                            terms:description "None" ;
                                            terms:license <https://creativecommons.org/licenses/unspecified> ;
                                            terms:title "ImageTrans: Application-level ontology for image transformation" ;
-                                           owl:versionInfo "2026-02-24" .
+                                           owl:versionInfo "2026-03-09" .
 
 #################################################################
 #    Annotation properties
