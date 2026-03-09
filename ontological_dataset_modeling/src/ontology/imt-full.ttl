@@ -1034,8 +1034,8 @@ image derived from is a relation between an warped image and an image, which is 
                                        rdf:type owl:SymmetricProperty ;
                                        rdfs:domain <https://w3id.org/pmd/imt/IMT_0000024> ;
                                        rdfs:range <https://w3id.org/pmd/imt/IMT_0000024> ;
-                                       rdfs:comment "spatially coinsides with is a relation between two fields of view of two images which are members of the same matching pair."@en ;
-                                       rdfs:label "spatially coinsides with"@en .
+                                       rdfs:comment "spatially coincides with is a relation between two fields of view of two images which are members of the same matching pair."@en ;
+                                       rdfs:label "spatially coincides with"@en .
 
 
 #################################################################
@@ -3035,42 +3035,6 @@ co:PMD_0060009 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/imt/IMT_0000002
 <https://w3id.org/pmd/imt/IMT_0000002> rdf:type owl:Class ;
-                                       owl:equivalentClass [ owl:intersectionOf ( obo:IAO_0000100
-                                                                                  [ rdf:type owl:Restriction ;
-                                                                                    owl:onProperty <https://w3id.org/pmd/imt/IMT_0000008> ;
-                                                                                    owl:someValuesFrom [ owl:intersectionOf ( obo:IAO_0000101
-                                                                                                                              [ rdf:type owl:Restriction ;
-                                                                                                                                owl:onProperty obo:IAO_0000136 ;
-                                                                                                                                owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/imt/IMT_0000024>
-                                                                                                                                                                          [ rdf:type owl:Restriction ;
-                                                                                                                                                                            owl:onProperty <https://w3id.org/pmd/imt/IMT_0000023> ;
-                                                                                                                                                                            owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/imt/IMT_0000024>
-                                                                                                                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                                                                                                                        owl:onProperty co:PMD_0000004 ;
-                                                                                                                                                                                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:IAO_0000101
-                                                                                                                                                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                                                                                                                                                    owl:onProperty <https://w3id.org/pmd/imt/IMT_0000010> ;
-                                                                                                                                                                                                                                                                    owl:someValuesFrom obo:IAO_0000100
-                                                                                                                                                                                                                                                                  ]
-                                                                                                                                                                                                                                                                ) ;
-                                                                                                                                                                                                                                             rdf:type owl:Class
-                                                                                                                                                                                                                                           ]
-                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                    ) ;
-                                                                                                                                                                                                 rdf:type owl:Class
-                                                                                                                                                                                               ]
-                                                                                                                                                                          ]
-                                                                                                                                                                        ) ;
-                                                                                                                                                     rdf:type owl:Class
-                                                                                                                                                   ]
-                                                                                                                              ]
-                                                                                                                            ) ;
-                                                                                                         rdf:type owl:Class
-                                                                                                       ]
-                                                                                  ]
-                                                                                ) ;
-                                                             rdf:type owl:Class
-                                                           ] ;
                                        rdfs:subClassOf obo:IAO_0000100 ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <https://w3id.org/pmd/imt/IMT_0000007> ;
@@ -3083,14 +3047,14 @@ co:PMD_0060009 rdf:type owl:Class ;
                                                                                                      owl:onProperty obo:IAO_0000136 ;
                                                                                                      owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/imt/IMT_0000024>
                                                                                                                                                [ rdf:type owl:Restriction ;
-                                                                                                                                                 owl:onProperty <https://w3id.org/pmd/imt/IMT_0000023> ;
+                                                                                                                                                 owl:onProperty obo:RO_0002131 ;
                                                                                                                                                  owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/imt/IMT_0000024>
                                                                                                                                                                                            [ rdf:type owl:Restriction ;
                                                                                                                                                                                              owl:onProperty co:PMD_0000004 ;
                                                                                                                                                                                              owl:someValuesFrom [ owl:intersectionOf ( obo:IAO_0000101
                                                                                                                                                                                                                                        [ rdf:type owl:Restriction ;
                                                                                                                                                                                                                                          owl:onProperty <https://w3id.org/pmd/imt/IMT_0000010> ;
-                                                                                                                                                                                                                                         owl:someValuesFrom obo:IAO_0000100
+                                                                                                                                                                                                                                         owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000002>
                                                                                                                                                                                                                                        ]
                                                                                                                                                                                                                                      ) ;
                                                                                                                                                                                                                   rdf:type owl:Class

@@ -21,7 +21,7 @@ WARN	missing_definition	parameterized transofrmation model	definition
 WARN	missing_definition	manually created point correspondences	definition	
 WARN	missing_definition	inlier point correspondence	definition	
 WARN	missing_definition	outlier point correspondence	definition	
-WARN	missing_definition	spatially coinsides with	definition	
+WARN	missing_definition	spatially coincides with	definition	
 WARN	missing_definition	field of view	definition	
 WARN	missing_obsolete_label	coordinate system	rdfs:label	coordinate system@en
 WARN	missing_obsolete_label	has coordinate system	rdfs:label	has coordinate system@en

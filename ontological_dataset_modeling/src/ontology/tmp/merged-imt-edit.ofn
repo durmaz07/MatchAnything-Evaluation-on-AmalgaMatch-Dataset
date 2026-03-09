@@ -1120,10 +1120,10 @@ image derived from is a relation between an warped image and an image, which is 
 ObjectPropertyDomain(<https://w3id.org/pmd/imt/IMT_0000012> <http://purl.obolibrary.org/obo/IAO_0000101>)
 ObjectPropertyRange(<https://w3id.org/pmd/imt/IMT_0000012> <http://purl.obolibrary.org/obo/IAO_0000101>)
 
-# Object Property: <https://w3id.org/pmd/imt/IMT_0000023> (spatially coinsides with)
+# Object Property: <https://w3id.org/pmd/imt/IMT_0000023> (spatially coincides with)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/imt/IMT_0000023> "spatially coinsides with is a relation between two fields of view of two images which are members of the same matching pair."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000023> "spatially coinsides with"@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/imt/IMT_0000023> "spatially coincides with is a relation between two fields of view of two images which are members of the same matching pair."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000023> "spatially coincides with"@en)
 SubObjectPropertyOf(<https://w3id.org/pmd/imt/IMT_0000023> <http://purl.obolibrary.org/obo/RO_0002131>)
 SymmetricObjectProperty(<https://w3id.org/pmd/imt/IMT_0000023>)
 ObjectPropertyDomain(<https://w3id.org/pmd/imt/IMT_0000023> <https://w3id.org/pmd/imt/IMT_0000024>)
@@ -1960,7 +1960,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000874> "Ein Mikroskop, das sichtbares Licht und Linsen verwendet, um kleine Objekte oder Details zu vergrößern und zu betrachten."@de)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000874> <https://w3id.org/pmd/co/PMD_0000855>)
 
-# Class: <https://w3id.org/pmd/co/PMD_0000875> (Optische Mikroskopie)
+# Class: <https://w3id.org/pmd/co/PMD_0000875> (optical microscopy)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000875> "Optische Mikroskopie"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000875> "optical microscopy"@en)
@@ -2052,7 +2052,7 @@ EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000950> ObjectIntersectionOf(<ht
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000950> <http://purl.obolibrary.org/obo/BFO_0000015>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000950> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000016> <https://w3id.org/pmd/co/PMD_0000005>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <https://w3id.org/pmd/co/PMD_0000001>))))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000957> (Struktur Eigenschaften Analyseverfahren)
+# Class: <https://w3id.org/pmd/co/PMD_0000957> (structural property analyzing process)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000957> "Struktur Eigenschaften Analyseverfahren"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000957> "structural property analyzing process"@en)
@@ -2498,10 +2498,10 @@ SubClassOf(<https://w3id.org/pmd/imt/IMT_0000000> <http://purl.obolibrary.org/ob
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000002> "matching pair"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000002> "Matching pair is a data set which has exactly two 2D data items as its members, where one of the members is a target, and another one is a source. Here, the source image is to be mapped to the coordinate system (image scene) of a target image."@en)
-EquivalentClasses(<https://w3id.org/pmd/imt/IMT_0000002> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000100> ObjectSomeValuesFrom(<https://w3id.org/pmd/imt/IMT_0000008> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000101> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> ObjectIntersectionOf(<https://w3id.org/pmd/imt/IMT_0000024> ObjectSomeValuesFrom(<https://w3id.org/pmd/imt/IMT_0000023> ObjectIntersectionOf(<https://w3id.org/pmd/imt/IMT_0000024> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000004> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000101> ObjectSomeValuesFrom(<https://w3id.org/pmd/imt/IMT_0000010> <http://purl.obolibrary.org/obo/IAO_0000100>)))))))))))
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000002> <http://purl.obolibrary.org/obo/IAO_0000100>)
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000002> ObjectSomeValuesFrom(<https://w3id.org/pmd/imt/IMT_0000007> <https://w3id.org/pmd/co/PMD_0000502>))
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000002> ObjectSomeValuesFrom(<https://w3id.org/pmd/imt/IMT_0000008> <https://w3id.org/pmd/co/PMD_0000502>))
+SubClassOf(<https://w3id.org/pmd/imt/IMT_0000002> ObjectSomeValuesFrom(<https://w3id.org/pmd/imt/IMT_0000008> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000101> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> ObjectIntersectionOf(<https://w3id.org/pmd/imt/IMT_0000024> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002131> ObjectIntersectionOf(<https://w3id.org/pmd/imt/IMT_0000024> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000004> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000101> ObjectSomeValuesFrom(<https://w3id.org/pmd/imt/IMT_0000010> <https://w3id.org/pmd/imt/IMT_0000002>))))))))))
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000002> ObjectExactCardinality(2 <http://purl.obolibrary.org/obo/RO_0002351> <https://w3id.org/pmd/co/PMD_0000502>))
 
 # Class: <https://w3id.org/pmd/imt/IMT_0000003> (image transformation)
