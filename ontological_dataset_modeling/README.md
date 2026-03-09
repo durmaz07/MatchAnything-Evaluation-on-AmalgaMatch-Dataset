@@ -1,5 +1,5 @@
 
-![Build Status](https://github.com/cmllezr/ImageTrans/actions/workflows/qc.yml/badge.svg)
+![Build Status](https://github.com/durmaz07/MatchAnything-Evaluation-on-AmalgaMatch-Dataset/actions/workflows/qc.yml/badge.svg)
 
 # ImageTransformation: Application-level ontology for image transformation
 
