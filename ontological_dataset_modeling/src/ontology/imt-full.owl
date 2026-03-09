@@ -16,11 +16,11 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/imt/imt-full.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/imt/releases/2026-02-24/imt-full.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/imt/releases/2026-03-09/imt-full.owl"/>
         <dcterms:description>None</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <dcterms:title>ImageTrans: Application-level ontology for image transformation</dcterms:title>
-        <owl:versionInfo>2026-02-24</owl:versionInfo>
+        <owl:versionInfo>2026-03-09</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2404,7 +2404,7 @@ granularity. At these coarser levels, the individual molecules cannot be differe
     <!-- https://w3id.org/pmd/co/PMD_0000005 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000005">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
@@ -2412,15 +2412,16 @@ granularity. At these coarser levels, the individual molecules cannot be differe
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf rdf:nodeID="genid117"/>
-        <rdfs:comment xml:lang="en">Technical materials are complex object aggregates. The properties that are determined for those object aggregates are intrinsically associated with the methodologies employed in the measurement process. This is in contrast to typical &apos;physical&apos; properties, which like e.g. mass that can be determined to high accuracy independently of the measurement process. 
-As a consequence, the behavoiral material properties in the ontology are differeciated according to their measurement method, e.g. Brinell hardness and Vickers hardness are different types of indentation hardness rather than different measures/quantification (GDC) of the materials property &apos;indentation hardness&apos;.
- The &apos;unit idenifieres&apos; of such properties (e.g. &quot;HV1&quot;, &quot;HV10&quot;, &quot;HBW&quot;) are strictly speaking not units but rather references to the measurement methodology used to determine a numeric value that quantifies the property.</rdfs:comment>
-        <rdfs:label xml:lang="en">behavioral material property</rdfs:label>
-        <skos:definition xml:lang="en">A property is a material trait in terms of the kind and magnitude of response to a specific imposed stimulus. Generally, definitions of properties are made independent of material shape and size.
-
+        <rdfs:comment xml:lang="en">A property is a material trait in terms of the kind and magnitude of response to a specific imposed stimulus. Generally, definitions of properties are made independent of material shape and size.
 (Callister, W.D., Rethwisch, D.G., Materials Science and Engineering, Wiley, 2014)
 
-We only deal with intensive (system-size independent) material properties. Extensive properties that depend on the testpiece/specimen/probe size should be found in the respective testing method modules.</skos:definition>
+Technical materials are complex aggregates. Many properties that are determined for those aggregates are intrinsically associated with the methodologies employed in the measurement process. This is in contrast to typical &apos;physical&apos; properties, which like e.g. mass that can be determined to high accuracy independently of the measurement process. 
+As a consequence, material properties in the ontology are differeciated according to their measurement method, e.g. Brinell hardness and Vickers hardness are different types of indentation hardness rather than different measures/quantification (GDC) of the materials property &apos;indentation hardness&apos;.
+ The &apos;unit idenifieres&apos; of such properties (e.g. &quot;HV1&quot;, &quot;HV10&quot;, &quot;HBW&quot;) are strictly speaking not units but rather references to the measurement methodology used to determine a numeric value that quantifies the property.
+
+Extensive properties that depend on the object being tested rather than on the portion of matter are (extensive) object- or system-properties.</rdfs:comment>
+        <rdfs:label xml:lang="en">material property</rdfs:label>
+        <skos:definition xml:lang="en">a disposition of a portion of matter that is realized in a compatible process and whose realization is grounded in the portions intensive qualities</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     <owl:Restriction rdf:nodeID="genid117">
@@ -2527,7 +2528,7 @@ Specific rates, e.g., tensile rate, cooling rate, etc. should be added as  subcl
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000501">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <rdfs:label xml:lang="en">1D</rdfs:label>
-        <skos:definition xml:lang="en">1-D is an information content entity representing a one-dimensional structure or model representing a single linear dimension, often used in material science simulations or analysis.</skos:definition>
+        <skos:definition xml:lang="en">1D is a data item representing a one-dimensional structure or model representing a single linear dimension, often used in material science simulations or analysis.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -2538,7 +2539,7 @@ Specific rates, e.g., tensile rate, cooling rate, etc. should be added as  subcl
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000502">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <rdfs:label xml:lang="en">2D</rdfs:label>
-        <skos:definition xml:lang="en">A two-dimensional information content entity is a representation or analysis, commonly applied in studying planar material properties or surface phenomena.</skos:definition>
+        <skos:definition xml:lang="en">A two-dimensional data item is a representation or analysis, commonly applied in studying planar material properties or surface phenomena.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -2635,12 +2636,6 @@ Specific rates, e.g., tensile rate, cooling rate, etc. should be added as  subcl
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000551">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0025001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000004"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0025002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">See the editor note of composition to understand the difference between composition and chemical composition.
 
 See the pattern example of composition to underatand the difference between composition and proportion.</rdfs:comment>
@@ -2657,7 +2652,7 @@ See the pattern example of composition to underatand the difference between comp
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000553">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020131"/>
         <rdfs:label xml:lang="en">chemical potential</rdfs:label>
-        <skos:definition xml:lang="en">The chemical potential is a thermodynamic quality describing the energy change associated with the addition of a small quantity of a substance to a system at constant temperature and pressure.</skos:definition>
+        <skos:definition xml:lang="en">an intensive quality of a thermodynamic system describing the energy change associated with the addition of a small quantity of a substance to a system at constant temperature and pressure.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -2708,8 +2703,9 @@ See the pattern example of composition to underatand the difference between comp
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020099"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The finite set of periodic geometric arrangements is described e.g. by the 14 possible Bravais Lattices in three-dimensional space.</rdfs:comment>
         <rdfs:label xml:lang="en">crystal structure</rdfs:label>
-        <skos:definition xml:lang="en">The crystal structure is a morphologic quality that describes the periodic geometric arrangement of entities in a crystalline material. The finite set of periodic geometric arrangements is described by the 14 possible Bravais Lattices in three-dimensional space.</skos:definition>
+        <skos:definition xml:lang="en">an intensive qualtty of a crystal that embodies the periodic geometric arrangement of entities in a crystal lattice.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -2757,7 +2753,7 @@ See the pattern example of composition to underatand the difference between comp
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
         <rdfs:label xml:lang="de">Gerät</rdfs:label>
         <rdfs:label xml:lang="en">device</rdfs:label>
-        <skos:definition xml:lang="en">A physical or virtual entity used to perform a specific function or task, often involving measurement, manipulation, or analysis of materials.</skos:definition>
+        <skos:definition xml:lang="en">A device is an object that is designed to perform a specific function or task involving measurement, manipulation, processing, or analysis.</skos:definition>
         <skos:definition xml:lang="de">Ein physisches oder virtuelles Objekt, das verwendet wird, um eine bestimmte Funktion oder Aufgabe auszuführen, häufig im Zusammenhang mit der Messung, Manipulation oder Analyse von Materialien.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
@@ -2787,7 +2783,7 @@ See the pattern example of composition to underatand the difference between comp
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000619">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020148"/>
         <rdfs:label xml:lang="en">electric potential</rdfs:label>
-        <skos:definition xml:lang="en">The electric potential is a thermodynamic quality describing the amount of work needed to move a unit charge from a reference point to a specific location in an electric field.</skos:definition>
+        <skos:definition xml:lang="en">an extensvie quality describing the amount of work needed to move a unit charge from a reference point to a specific location in an electric field.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -2800,7 +2796,7 @@ See the pattern example of composition to underatand the difference between comp
         <obo:IAO_0000119 xml:lang="en">“Electron microscope.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/electron%20microscope. Accessed 24 Nov. 2022.</obo:IAO_0000119>
         <rdfs:label xml:lang="de">Elektronenmikroskop</rdfs:label>
         <rdfs:label xml:lang="en">electron microscope</rdfs:label>
-        <skos:definition xml:lang="en">A device that uses a beam of electrons to create high-resolution images of a sample&apos;s surface or structure.</skos:definition>
+        <skos:definition xml:lang="en">A microscope that uses a beam of electrons to create high-resolution images of a sample&apos;s surface or structure.</skos:definition>
         <skos:definition xml:lang="en">An electron-optical instrument in which a beam of electrons is used to produce an enlarged image of a minute object.</skos:definition>
         <skos:definition xml:lang="de">Ein Gerät, das einen Elektronenstrahl verwendet, um hochauflösende Bilder der Oberfläche oder Struktur einer Probe zu erstellen.</skos:definition>
     </owl:Class>
@@ -2951,7 +2947,7 @@ A manufacturing process is always a transformative process.</skos:definition>
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000834">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000502"/>
         <rdfs:label xml:lang="en">map</rdfs:label>
-        <skos:definition xml:lang="en">A map is a 2-D information content entity describing a representation of spatial data or relationships, often used in material science for visualizing properties or distributions.</skos:definition>
+        <skos:definition xml:lang="en">A map is a 2D information content entity describing a representation of spatial data or relationships, often used in material science for visualizing properties or distributions.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -2984,7 +2980,7 @@ A manufacturing process is always a transformative process.</skos:definition>
     <!-- https://w3id.org/pmd/co/PMD_0000856 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000856">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000957"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
         <rdfs:label xml:lang="de">Mikroskopie Verfahren</rdfs:label>
         <rdfs:label xml:lang="en">microscopy process</rdfs:label>
         <skos:definition xml:lang="de">Ein Struktur Eigenschaften Analyseverfahren, das verschiedene Arten von Mikroskopietechniken verwendet, um die Mikrostruktur und Morphologie von Materialien auf verschiedenen Ebenen zu visualisieren und zu analysieren.</skos:definition>
@@ -3001,7 +2997,7 @@ A manufacturing process is always a transformative process.</skos:definition>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000001"/>
         <rdfs:comment xml:lang="en">The focus of interest when looking at an object through the microstructure perspective is often its morphology.</rdfs:comment>
         <rdfs:label xml:lang="en">microstructure</rdfs:label>
-        <skos:definition xml:lang="en">The microstructure represents the small-scale structure of a material, including grains, phases, and defects, visible under a microscope.</skos:definition>
+        <skos:definition xml:lang="en">A microstructure is a portion of matter that represents the small-scale structure of a material, including grains, phases, and defects, visible under a microscope.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -3071,7 +3067,7 @@ A manufacturing process is always a transformative process.</skos:definition>
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000890">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
         <rdfs:label xml:lang="en">connected material entity aggregate</rdfs:label>
-        <skos:definition xml:lang="en">A material entity aggregate that is a mereological sum of separate material entities, which adhere to one another through chemical bonds or physical junctions that go beyond gravity.</skos:definition>
+        <skos:definition xml:lang="en">An object aggregate that is a mereological sum of separate material entities, which adhere to one another through chemical bonds or physical junctions that go beyond gravity.</skos:definition>
         <skos:example xml:lang="en">the atoms of a molecule, the molecules forming the membrane of a cell, the epidermis in a human body</skos:example>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
@@ -3083,7 +3079,7 @@ A manufacturing process is always a transformative process.</skos:definition>
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000891">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
         <rdfs:label xml:lang="en">disconnected material entity aggregate</rdfs:label>
-        <skos:definition xml:lang="en">A material entity aggregate that is a mereological sum of scattered (i.e. spatially separated) material entities, which do not adhere to one another through chemical bonds or physical junctions but, instead, relate to one another merely on grounds of metric proximity. The material entities are separated from one another through space or through other material entities that do not belong to the group.</skos:definition>
+        <skos:definition xml:lang="en">An object aggregate that is a mereological sum of scattered (i.e. spatially separated) material entities, which do not adhere to one another through chemical bonds or physical junctions but, instead, relate to one another merely on grounds of metric proximity. The material entities are separated from one another through space or through other material entities that do not belong to the group.</skos:definition>
         <skos:example xml:lang="en">a heap of stones, a colony of honeybees, a group of synapses, the trees of a forest, the canopy of a forest, the fish of a shoal, a group of commuters on the subway, the patients in a hospital</skos:example>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
@@ -3097,7 +3093,7 @@ A manufacturing process is always a transformative process.</skos:definition>
         <owl:disjointWith rdf:resource="https://w3id.org/pmd/co/PMD_0000967"/>
         <rdfs:comment xml:lang="en">The pressure is commonly measured in Pascals.</rdfs:comment>
         <rdfs:label xml:lang="en">pressure</rdfs:label>
-        <skos:definition xml:lang="en">The pressure is a thermodynamic quality describing the force exerted per unit area on a material.</skos:definition>
+        <skos:definition xml:lang="en">an intensive quality describing the force exerted per unit area in or on a material.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -3146,7 +3142,7 @@ A manufacturing process is always a transformative process.</skos:definition>
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000942">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020131"/>
         <rdfs:label xml:lang="en">specific surface area</rdfs:label>
-        <skos:definition xml:lang="en">The specific surface area is a morphologic quality describing the total surface area of a material per unit of mass or volume.</skos:definition>
+        <skos:definition xml:lang="en">an intensive quality embodying the total surface area of a material per unit of mass or volume.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -3422,45 +3418,12 @@ A manufacturing process is always a transformative process.</skos:definition>
     
 
 
-    <!-- https://w3id.org/pmd/co/PMD_0020004 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020004">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0025001"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0025997"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000116 xml:lang="en">See editior note of composition to underatand the difference between composition and chemical composition data items.
-
-To understand the difference between the composition and the composition data item, one has to understand the difference between SDCs and GDCs in BFO. A triple &quot;material entity has quality compsition&quot;, conveys the fact such quality exists without telling us what are fractions of compounds in this material entity. A triple &quot;compostion is subject of composition data item&quot; conveys that there&apos;s an information about values of these fractions. Think of comosition data item as a pdf where the composition is documented.</obo:IAO_0000116>
-        <rdfs:comment xml:lang="en">These portions of other matters do not have to be portions of specific chemical elements, i.e., atomic composition, but rather portions of other substances, such as nitric acid and water.</rdfs:comment>
-        <rdfs:label xml:lang="en">composition data item</rdfs:label>
-        <skos:altLabel xml:lang="en">composition specification</skos:altLabel>
-        <skos:definition xml:lang="en">Composition data item is an information content entity that is about composition of a material enity. It has members fraction value specifications which specifiy values of propotions of compounds, which are parts of the material enity.</skos:definition>
-        <skos:example xml:lang="en">Nitric acid solution has quality  composition, and  the composition data item is about this composition.The composition data item has members fraction specifications of nitric acid, e.g., 4 vol.%, and distilled water. These fraction specifications specify value of pure substances of nitric acid and distilled water, respectively. Furthermore, these fraction specifications specify values of relational qualities (volume) proportion of nitric acid and (volume) proportion of distilled water.</skos:example>
-        <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pmd/co/PMD_0020005 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020005">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020131"/>
         <rdfs:label xml:lang="en">porosity</rdfs:label>
-        <skos:definition xml:lang="en">The porosity is a quality describing the fraction of the materials (enclosing) spatial region occupied by pores.</skos:definition>
+        <skos:definition xml:lang="en">itensive quality embodiying the fraction of the materials (enclosing) spatial region occupied by pores.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -3560,7 +3523,7 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">polycrystal</rdfs:label>
         <skos:altLabel xml:lang="en">Polycrystalline structure</skos:altLabel>
-        <skos:definition xml:lang="en">Polycrystal is a connected object aggregate that has continuant part some crystal grains</skos:definition>
+        <skos:definition xml:lang="en">A polycrystal is a connected material entity aggregate that consists of multiple crystal grains joined through crystallographic interfaces.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -3607,21 +3570,21 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020131">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <rdfs:subClassOf rdf:nodeID="genid255"/>
+        <rdfs:subClassOf rdf:nodeID="genid249"/>
         <owl:disjointWith rdf:resource="https://w3id.org/pmd/co/PMD_0020148"/>
         <rdfs:label xml:lang="en">intensive quality</rdfs:label>
         <skos:altLabel xml:lang="en">Point property</skos:altLabel>
         <skos:definition xml:lang="en">An intensive quality is a quality that inheres in only portion of matter and thus is independent of the bearers (system-) size.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
-    <owl:Restriction rdf:nodeID="genid255">
+    <owl:Restriction rdf:nodeID="genid249">
         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
         <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000001"/>
     </owl:Restriction>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://w3id.org/pmd/co/PMD_0020131"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid255"/>
+        <owl:annotatedTarget rdf:nodeID="genid249"/>
         <rdfs:comment xml:lang="en">Due to the duality of object and portion of matter this axiom can not be an equivalent class axiom.</rdfs:comment>
     </owl:Axiom>
     
@@ -3632,7 +3595,7 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020132">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020148"/>
         <rdfs:label xml:lang="en">size</rdfs:label>
-        <skos:definition xml:lang="en">Size is the quality of a material entity that describes its spatial extend.</skos:definition>
+        <skos:definition xml:lang="en">an extensive quality of a material entity that describes its spatial extend.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -3656,7 +3619,7 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020148"/>
         <obo:IAO_0000119 rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00000150"/>
         <rdfs:label xml:lang="en">energy</rdfs:label>
-        <skos:definition xml:lang="en">Energy is a quality of material entities which manifests as a capacity to perform work (such as causing motion or the interaction of molecules)</skos:definition>
+        <skos:definition xml:lang="en">an extensive quality of material entities which manifests as a capacity to perform work (such as causing motion or the interaction of molecules)</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -3698,8 +3661,10 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020161">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+        <obo:IAO_0000119>old defintion: 
+Activity (a_X) is a relational property between a chemical species X and a non-ideal solution. a_X is a measure of the effective concentration of a chemical species X in the non-ideal solution, accounting for interactions between particles. It is defined as the product of the concentration and an activity coefficient, where the activity coefficient corrects for non-ideal behavior.</obo:IAO_0000119>
         <rdfs:label xml:lang="en">activity (thermodynamic)</rdfs:label>
-        <skos:definition xml:lang="en">Activity (a_X) is a relational property between a chemical species X and a non-ideal solution. a_X is a measure of the effective concentration of a chemical species X in the non-ideal solution, accounting for interactions between particles. It is defined as the product of the concentration and an activity coefficient, where the activity coefficient corrects for non-ideal behavior.</skos:definition>
+        <skos:definition xml:lang="en">Thermodynamic activity is a relational quality that inheres between a chemical species and a non-ideal solution and represents the effective concentration of the species accounting for particle interactions.</skos:definition>
     </owl:Class>
     
 
@@ -3759,7 +3724,7 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
         </rdfs:subClassOf>
         <obo:IAO_0000116 xml:lang="en">size values of indiviudal grains are properties of the respective objects</obo:IAO_0000116>
         <rdfs:label xml:lang="en">grain size</rdfs:label>
-        <skos:definition xml:lang="en">an average size of the grains of a polycrystal</skos:definition>
+        <skos:definition xml:lang="en">an intensive quality epitomizing the average size of the grains of a polycrystal</skos:definition>
     </owl:Class>
     
 
@@ -3768,41 +3733,12 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0025001">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020131"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000004"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020004"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000116 xml:lang="en">There&apos;s a dfference between composition and chemical compositon for the following reason: chemical compositon is relevant when the mass/volume/mole proportions of chemical elements(!) are identified, whlist composition includes proportions of molecules, other pure chemical substances, or even proptions of objects (in an object aggregate).</obo:IAO_0000116>
         <rdfs:label xml:lang="en">composition</rdfs:label>
         <skos:definition xml:lang="en">Composition is an intensive quality which defines types and proportions of compounds present in a material entity and is subject of some composition data item.</skos:definition>
         <skos:example xml:lang="en">4 vol.% nitric acid solution, Styrene-Butadiene-Styrene (SBS) Block Copolymer with 50 vol.% of both styrene and butadiene</skos:example>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
         <co:PMD_0000064 xml:lang="en">Composition is a collective property of a portion of matter, i.e., the triple portion of matter has quality composition holds. As &quot;has quality&quot; is an inverse  functional property, only one instance of portion of matter can have this specific composition. However, proportions describe the relation between the prortion of matter (the whole) and some compound (the part). Thus, the following triples hold: portion of matter has relational quality proportion; portion of matter has part some substance (or whatever is your part); substance has relational quality proportion. &quot;Has relational quality&quot; is not inverse functional, i.e., it can point to a single object from 2 distinct subjects.</co:PMD_0000064>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0025002 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0025002">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020004"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000551"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">chemical composition data item</rdfs:label>
-        <skos:altLabel xml:lang="en">chemical composition specification</skos:altLabel>
-        <skos:definition xml:lang="en">Chemical composition data item is an information content entity that is about composition of a portion of matter. It has members fraction value specifications which specifiy values of propotions of portions of (pure) chemical elements, which are parts of the portion of matter.</skos:definition>
-        <skos:example xml:lang="en">Steel has quality chemical composition , and the chemical composition data item is about the chemical composition .The chemical composition data item has members fraction specifications of iron and carbon. These fraction specifications specify value of portion of iron and portion of carbon respectively. Furthermore, these fraction specifications specify  values of relational qualities (mass) proportion of iron and (mass) proportion of carbon.</skos:example>
-        <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
 
@@ -3824,8 +3760,9 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020023"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">ferrite, austenite, martensite, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">metallic grain structure</rdfs:label>
-        <skos:definition xml:lang="en">metallic grain structure characterizes the distinct phases in the microscopic structure of a metallic material. It concretizes ferrite, austenite, martensite, etc.</skos:definition>
+        <skos:definition xml:lang="en">intensive quality epitomizing the distinct phases in the microscopic structure of a metallic material.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</co:PMD_0000060>
     </owl:Class>
     
@@ -3836,7 +3773,7 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0025005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <rdfs:label xml:lang="en">3D</rdfs:label>
-        <skos:definition xml:lang="en">A three-dimensional information content entity is a representation or analysis, commonly applied in studying material properties in its volume or describing a dependency of one variable on two other variables.</skos:definition>
+        <skos:definition xml:lang="en">A three-dimensional data item is a representation or analysis, commonly applied in studying material properties in its volume or describing a dependency of one variable on two other variables.</skos:definition>
         <skos:example xml:lang="en">Orientation distribution function (ODF), potential energy landscape</skos:example>
     </owl:Class>
     
@@ -3848,8 +3785,9 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000624"/>
         <rdfs:label xml:lang="de">Transmissionselektronenmikroskop</rdfs:label>
         <rdfs:label xml:lang="en">transmission electron microscope</rdfs:label>
-        <skos:definition xml:lang="en">A transmission electron microscope (SEM) is a measuring device that produces high-resolution images of a sample&apos;s internal structure by transmitting electrons through the sample.</skos:definition>
-        <skos:definition xml:lang="de">Ein Transmissionselektronenmikroskop (TEM) ist ein Messgerät, das hochauflösende Bilder der inneren Struktur einer Probe erzeugt, indem es Elektronen durch die Probe strahlt.</skos:definition>
+        <skos:definition xml:lang="en">An electron microscope that produces high-resolution images of a sample&apos;s internal structure by transmitting electrons through the sample.</skos:definition>
+        <skos:definition xml:lang="de">Ein Elektronenmikroskop, das hochauflösende Bilder der inneren Struktur einer Probe erzeugt, indem es Elektronen durch die Probe strahlt.</skos:definition>
+        <co:PMD_0050117>TEM</co:PMD_0050117>
     </owl:Class>
     
 
@@ -3899,49 +3837,6 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
     
 
 
-    <!-- https://w3id.org/pmd/co/PMD_0025997 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0025997">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001931"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0001927"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020101"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0025999"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020004"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">fraction value specification</rdfs:label>
-        <skos:definition xml:lang="en">Fraction value specification is a value specification that contains information about quantitative share of a part relative to a specified whole.</skos:definition>
-        <skos:example xml:lang="en">2.05 wt.% of carbon in steel, 4 vol.% of nitric acid in a solution</skos:example>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pmd/co/PMD_0040001 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0040001">
@@ -3975,9 +3870,8 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0040001"/>
         <rdfs:label xml:lang="de">Dicke</rdfs:label>
         <rdfs:label xml:lang="en">thickness</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://w3id.org/pmd/co/2.0.8/Thickness"/>
+        <skos:definition xml:lang="en">A length that describes the measured dimension in one direction of a test piece.</skos:definition>
         <skos:definition xml:lang="de">Diese Klasse beschreibt das gemessene Maß in einer Richtung eines Prüfkörpers.</skos:definition>
-        <skos:definition xml:lang="en">This class describes the measured dimension in one direction of a test piece.</skos:definition>
     </owl:Class>
     
 
@@ -4004,7 +3898,7 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
         <rdfs:label xml:lang="de">Form</rdfs:label>
         <rdfs:label xml:lang="en">shape</rdfs:label>
         <skos:definition xml:lang="de">Das sichtbare Ausstattungsmerkmal (räumliche Form oder Kontur) eines bestimmten Objektes oder einer Art von Objekt.</skos:definition>
-        <skos:definition xml:lang="en">The visible makeup characteristic (spatial form or contour) of a particular item or kind of item.a</skos:definition>
+        <skos:definition xml:lang="en">Extemsive quality, the visible makeup characteristic (spatial form or contour) of a particular item or kind of item.</skos:definition>
     </owl:Class>
     
 
@@ -4051,9 +3945,9 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0060009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
-        <rdfs:comment xml:lang="en">The intend of the specification datum is to express the &quot;Sollwert&quot; of some qualitiy or behavioral material property. Then, the specification datum can be further specified by  some value specification.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The intent of the specification datum is to express the &quot;Sollwert&quot; of some qualitiy or behavioral material property. Then, the specification datum can be further specified by  some value specification.</rdfs:comment>
         <rdfs:label xml:lang="en">specification datum</rdfs:label>
-        <skos:definition xml:lang="en">Specification datum is a data item that provides an information of a setpoint of some value, i.e., it is an intended value.</skos:definition>
+        <skos:definition xml:lang="en">A directive information entity that provides information of a setpoint of some value, i.e., it is an intended value.</skos:definition>
         <skos:example xml:lang="en">The setpoint value of a ultimate tensile strength of some steel material</skos:example>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>

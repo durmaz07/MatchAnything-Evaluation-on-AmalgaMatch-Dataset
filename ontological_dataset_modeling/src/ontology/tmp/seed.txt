@@ -154,7 +154,6 @@ https://creativecommons.org/licenses/unspecified
 https://github.com/information-artifact-ontology/IAO/issues/206
 https://w3id.org/pmd/IMT_0000000
 https://w3id.org/pmd/co/2.0.8/Diameter
-https://w3id.org/pmd/co/2.0.8/Thickness
 https://w3id.org/pmd/co/2.0.8/Width
 https://w3id.org/pmd/co/PMD_0000001
 https://w3id.org/pmd/co/PMD_0000004
@@ -221,7 +220,6 @@ https://w3id.org/pmd/co/PMD_0001019
 https://w3id.org/pmd/co/PMD_0001020
 https://w3id.org/pmd/co/PMD_0001032
 https://w3id.org/pmd/co/PMD_0020003
-https://w3id.org/pmd/co/PMD_0020004
 https://w3id.org/pmd/co/PMD_0020005
 https://w3id.org/pmd/co/PMD_0020006
 https://w3id.org/pmd/co/PMD_0020007
@@ -277,7 +275,6 @@ https://w3id.org/pmd/co/PMD_0020220
 https://w3id.org/pmd/co/PMD_0020242
 https://w3id.org/pmd/co/PMD_0020243
 https://w3id.org/pmd/co/PMD_0025001
-https://w3id.org/pmd/co/PMD_0025002
 https://w3id.org/pmd/co/PMD_0025003
 https://w3id.org/pmd/co/PMD_0025005
 https://w3id.org/pmd/co/PMD_0025006
@@ -286,7 +283,6 @@ https://w3id.org/pmd/co/PMD_0025012
 https://w3id.org/pmd/co/PMD_0025016
 https://w3id.org/pmd/co/PMD_0025017
 https://w3id.org/pmd/co/PMD_0025018
-https://w3id.org/pmd/co/PMD_0025997
 https://w3id.org/pmd/co/PMD_0025998
 https://w3id.org/pmd/co/PMD_0025999
 https://w3id.org/pmd/co/PMD_0040001
