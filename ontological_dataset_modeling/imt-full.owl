@@ -21,6 +21,7 @@
         <dcterms:created>2026-03-09</dcterms:created>
         <dcterms:description>None</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
+        <dcterms:license>https://creativecommons.org/licenses/by/4.0/</dcterms:license>
         <dcterms:title>ImageTrans: Application-level ontology for image transformation</dcterms:title>
         <owl:priorVersion rdf:resource="https://w3id.org/pmd/imt/"/>
         <owl:versionInfo>2026-03-09</owl:versionInfo>
